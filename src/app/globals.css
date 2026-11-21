@@ -1,26 +1,184 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+
+  --palette-deep-olive: #2a3922;
+  --palette-moss: #464313;
+  --palette-soft-olive: #b8b367;
+  --palette-blush-pink: #fbc0c1;
+  --palette-dusty-rose: #b9535c;
+  --palette-burgundy: #4c041a;
+  --palette-warm-cream: #ede8e4;
+
+  --background: var(--palette-warm-cream);
+  --foreground: var(--palette-deep-olive);
+  --muted-foreground: var(--palette-moss);
+  --surface: var(--palette-blush-pink);
+  --surface-foreground: var(--palette-deep-olive);
+  --border: color-mix(in srgb, var(--palette-deep-olive) 24%, transparent);
+  --primary: var(--palette-burgundy);
+  --primary-foreground: var(--palette-warm-cream);
+  --highlight: var(--palette-soft-olive);
+  --highlight-foreground: var(--palette-deep-olive);
+  --decorative-rose: var(--palette-dusty-rose);
+  --focus-ring: var(--palette-burgundy);
+  --hero-background: var(--palette-deep-olive);
+  --hero-foreground: var(--palette-warm-cream);
+  --hero-accent: var(--palette-blush-pink);
+  --hero-accent-foreground: var(--palette-deep-olive);
+
+  --type-display: clamp(4rem, 16vw, 11rem);
+  --type-hero: clamp(3.15rem, 8.65vw, 8rem);
+  --type-heading: clamp(2.5rem, 7vw, 6rem);
+  --type-body-large: clamp(1.125rem, 1rem + 0.6vw, 1.5rem);
+  --type-body: 1rem;
+  --type-label: 0.8125rem;
+
+  --leading-display: 0.86;
+  --leading-hero: 0.9;
+  --leading-heading: 0.95;
+  --leading-body: 1.65;
+  --tracking-display: -0.065em;
+  --tracking-hero: -0.067em;
+  --tracking-heading: -0.045em;
+  --tracking-label: 0.08em;
+
+  --font-body:
+    var(--font-geist-sans), "Noto Sans Myanmar", "Myanmar Text", Arial,
+    sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
+  --color-decorative-rose: var(--decorative-rose);
+  --color-focus-ring: var(--focus-ring);
+  --color-hero-background: var(--hero-background);
+  --color-hero-foreground: var(--hero-foreground);
+  --color-hero-accent: var(--hero-accent);
+  --color-hero-accent-foreground: var(--hero-accent-foreground);
+
+  --font-sans: var(--font-body);
   --font-mono: var(--font-geist-mono);
+
+  --text-display: var(--type-display);
+  --text-display--line-height: var(--leading-display);
+  --text-display--letter-spacing: var(--tracking-display);
+  --text-hero: var(--type-hero);
+  --text-hero--line-height: var(--leading-hero);
+  --text-hero--letter-spacing: var(--tracking-hero);
+  --text-heading: var(--type-heading);
+  --text-heading--line-height: var(--leading-heading);
+  --text-heading--letter-spacing: var(--tracking-heading);
+  --text-body-large: var(--type-body-large);
+  --text-body-large--line-height: 1.45;
+  --text-body: var(--type-body);
+  --text-body--line-height: var(--leading-body);
+  --text-label: var(--type-label);
+  --text-label--letter-spacing: var(--tracking-label);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--background);
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
+  min-height: 100dvh;
+  overflow-x: clip;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--surface);
+  color: var(--surface-foreground);
+}
+
+:focus-visible {
+  outline: 0.1875rem solid var(--focus-ring);
+  outline-offset: 0.1875rem;
+}
+
+[data-dark-surface] :focus-visible {
+  outline-color: var(--hero-accent);
+}
+
+[data-light-surface] :focus-visible {
+  outline-color: var(--focus-ring);
+}
+
+[data-hero-cta]:focus-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+[data-work-reveal]:focus-within {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+[data-section-reveal]:focus-within {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.project-cover--uni-yatwon {
+  --project-background: #f0cf3d;
+  --project-ink: var(--foreground);
+  --project-accent: #f0cf3d;
+
+  background: var(--project-background);
+  color: var(--project-ink);
+}
+
+.project-cover--prime-city {
+  --project-background: #11120d;
+  --project-ink: #f0cf3d;
+  --project-accent: #f0cf3d;
+
+  background: var(--project-background);
+  color: var(--project-ink);
+}
+
+#main-content:focus {
+  outline: none;
+}
+
+.hero-split-line,
+.hero-split-line-mask {
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
