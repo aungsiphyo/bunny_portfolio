@@ -22,7 +22,7 @@ export function SiteFooter() {
           </div>
 
           <nav className="lg:col-span-4" aria-label="Footer navigation">
-            <p className="font-mono text-xs font-semibold tracking-[0.1em] text-background/55 uppercase">
+            <p className="font-mono text-xs font-semibold tracking-[0.1em] text-background/65 uppercase">
               Navigate
             </p>
             <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-1">
@@ -40,7 +40,7 @@ export function SiteFooter() {
           </nav>
 
           <nav className="lg:col-span-3 lg:col-start-10" aria-label="Social links">
-            <p className="font-mono text-xs font-semibold tracking-[0.1em] text-background/55 uppercase">
+            <p className="font-mono text-xs font-semibold tracking-[0.1em] text-background/65 uppercase">
               Connect
             </p>
             <ul className="mt-4 grid">
@@ -62,8 +62,8 @@ export function SiteFooter() {
           </nav>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-background/15 pt-6 font-mono text-xs tracking-[0.06em] text-background/55 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Bunny (Ko Si).</p>
+        <div className="mt-10 flex flex-col gap-3 border-t border-background/20 pt-6 font-mono text-xs tracking-[0.06em] text-background/65 sm:flex-row sm:items-center sm:justify-between">
+          <p>© Bunny (Ko Si). All rights reserved.</p>
           <p>Software Engineer · Cloud &amp; DevOps Enthusiast</p>
         </div>
       </Container>

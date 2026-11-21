@@ -6,10 +6,10 @@ import { Container } from "@/components/ui/container";
 import { siteConfig } from "@/data/site";
 
 const primaryCtaClassName =
-  "inline-flex min-h-14 items-center justify-between gap-5 bg-hero-accent px-5 font-semibold text-hero-accent-foreground transition-colors hover:bg-hero-foreground sm:min-w-48";
+  "hero-primary-cta inline-flex min-h-14 items-center justify-between gap-5 bg-hero-accent px-5 font-semibold transition-[background-color,color,transform] hover:-translate-y-0.5 hover:bg-hero-foreground motion-reduce:transform-none motion-reduce:transition-none sm:min-w-48";
 
 const secondaryCtaClassName =
-  "inline-flex min-h-14 items-center justify-between gap-5 border border-hero-foreground/35 px-5 font-semibold text-hero-foreground transition-colors hover:border-hero-accent hover:text-hero-accent sm:min-w-48";
+  "inline-flex min-h-14 items-center justify-between gap-5 border border-hero-foreground/45 px-5 font-semibold text-hero-foreground transition-[border-color,color,transform] hover:-translate-y-0.5 hover:border-hero-accent hover:text-hero-accent motion-reduce:transform-none motion-reduce:transition-none sm:min-w-48";
 
 export function Hero() {
   const { hero } = siteConfig;
@@ -21,7 +21,7 @@ export function Hero() {
 
       <Container className="relative z-10 flex min-h-svh flex-col pt-28 pb-7 sm:pt-32 sm:pb-9 lg:pt-36 lg:pb-12">
         <p
-          className="max-w-[31rem] font-mono text-[0.6875rem] leading-relaxed font-semibold tracking-[0.12em] text-hero-foreground/70 uppercase sm:text-xs"
+          className="max-w-[31rem] font-mono text-xs leading-relaxed font-semibold tracking-[0.09em] text-hero-foreground/85 uppercase sm:tracking-[0.11em]"
           data-hero-eyebrow
         >
           {hero.eyebrow}

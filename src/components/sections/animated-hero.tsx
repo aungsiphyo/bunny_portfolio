@@ -48,24 +48,24 @@ export function AnimatedHero({ children }: AnimatedHeroProps) {
           .from(artwork, { duration: 1.1, opacity: 0 }, 0.1)
           .from(
             "[data-hero-support]",
-            { duration: 0.55, opacity: 0, y: 18 },
-            0.92,
+            { duration: 0.5, opacity: 0, y: 16 },
+            0.7,
           )
           .from(
             "[data-hero-cta]",
             {
               clearProps: "opacity,transform",
-              duration: 0.52,
+              duration: 0.48,
               opacity: 0,
-              stagger: 0.08,
-              y: 16,
+              stagger: 0.07,
+              y: 14,
             },
-            1.02,
+            0.82,
           )
           .from(
             "[data-hero-scroll]",
-            { duration: 0.45, opacity: 0, y: 10 },
-            1.22,
+            { duration: 0.42, opacity: 0, y: 8 },
+            1.02,
           );
 
         if (primaryLine) {
@@ -100,8 +100,8 @@ export function AnimatedHero({ children }: AnimatedHeroProps) {
             onSplit(split) {
               return gsap.from(split.lines, {
                 autoAlpha: 0,
-                delay: 0.36,
-                duration: 0.92,
+                delay: 0.3,
+                duration: 0.86,
                 ease: "expo.out",
                 rotate: 1.25,
                 scaleY: 0.82,

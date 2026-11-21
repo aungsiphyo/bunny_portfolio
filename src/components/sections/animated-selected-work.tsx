@@ -25,15 +25,15 @@ export function AnimatedSelectedWork({ children }: AnimatedSelectedWorkProps) {
         reveals.forEach((element) => {
           gsap.from(element, {
             clearProps: "opacity,transform",
-            duration: 0.68,
+            duration: 0.62,
             ease: "power3.out",
             opacity: 0,
             scrollTrigger: {
               trigger: element,
-              start: "top 86%",
+              start: "top 88%",
               once: true,
             },
-            y: 30,
+            y: 24,
           });
         });
       });

@@ -141,6 +141,10 @@ a {
   transform: none !important;
 }
 
+.hero-primary-cta {
+  color: var(--hero-accent-foreground);
+}
+
 .project-cover--uni-yatwon {
   --project-background: #f0cf3d;
   --project-ink: var(--foreground);

@@ -68,54 +68,57 @@ function UniYatwonArtwork() {
       xmlns="http://www.w3.org/2000/svg"
       focusable="false"
     >
-      <circle cx="751" cy="116" r="188" fill="currentColor" opacity="0.08" />
-      <circle cx="751" cy="116" r="112" stroke="currentColor" opacity="0.34" />
-      <circle cx="751" cy="116" r="13" fill="currentColor" />
-      <path
-        d="M-46 629C136 470 295 409 459 426C618 443 758 377 1006 166"
-        stroke="currentColor"
-        strokeWidth="2"
-        opacity="0.42"
-      />
-      <path
-        d="M-29 671C186 521 326 486 498 496C661 505 811 418 994 257"
-        stroke="currentColor"
-        strokeWidth="2"
-        opacity="0.22"
-      />
-      <path
-        d="M174 160H470V508H174V160Z"
+      <g stroke="currentColor" strokeWidth="1" opacity="0.12">
+        <path d="M0 120H960M0 600H960" />
+        <path d="M120 0V720M840 0V720" />
+      </g>
+
+      <circle cx="782" cy="98" r="210" fill="currentColor" opacity="0.07" />
+      <circle cx="782" cy="98" r="126" stroke="currentColor" opacity="0.3" />
+      <circle cx="782" cy="98" r="12" fill="currentColor" />
+
+      <text
+        x="82"
+        y="105"
         fill="currentColor"
-        opacity="0.94"
-      />
-      <path d="M215 211H430" stroke="var(--project-accent)" strokeWidth="9" />
+        fontFamily="var(--font-geist-mono), monospace"
+        fontSize="18"
+        fontWeight="700"
+        letterSpacing="5"
+      >
+        UNI / YATWON
+      </text>
+
+      <path d="M82 151H366" stroke="currentColor" strokeWidth="3" opacity="0.55" />
+      <path d="M82 174H262" stroke="currentColor" strokeWidth="3" opacity="0.3" />
+
       <path
-        d="M215 258H380"
-        stroke="var(--project-accent)"
-        strokeWidth="9"
-        opacity="0.72"
-      />
-      <path
-        d="M215 322C256 286 305 289 343 322C382 355 424 352 462 313"
-        stroke="var(--project-accent)"
-        strokeWidth="12"
-      />
-      <circle cx="225" cy="435" r="32" fill="var(--project-accent)" />
-      <circle cx="311" cy="435" r="32" fill="var(--project-accent)" opacity="0.68" />
-      <circle cx="397" cy="435" r="32" fill="var(--project-accent)" opacity="0.38" />
-      <path d="M470 224L621 293V582L470 508V224Z" fill="currentColor" opacity="0.72" />
-      <path
-        d="M510 294L581 327"
-        stroke="var(--project-accent)"
-        strokeWidth="8"
-        opacity="0.8"
+        d="M101 289V449C101 544 163 603 258 603C353 603 415 544 415 449V289"
+        stroke="currentColor"
+        strokeWidth="66"
       />
       <path
-        d="M510 342L581 375"
-        stroke="var(--project-accent)"
-        strokeWidth="8"
-        opacity="0.52"
+        d="M485 290L589 437L694 290M589 437V603"
+        stroke="currentColor"
+        strokeWidth="66"
+        strokeLinejoin="bevel"
       />
+
+      <path
+        d="M258 529C362 447 440 449 541 503C626 548 715 528 848 408"
+        stroke="var(--project-accent)"
+        strokeWidth="10"
+      />
+      <circle cx="258" cy="529" r="22" fill="var(--project-accent)" />
+      <circle cx="541" cy="503" r="22" fill="var(--project-accent)" />
+      <circle cx="848" cy="408" r="22" fill="var(--project-accent)" />
+      <circle cx="258" cy="529" r="40" stroke="currentColor" strokeWidth="3" opacity="0.32" />
+      <circle cx="541" cy="503" r="40" stroke="currentColor" strokeWidth="3" opacity="0.32" />
+      <circle cx="848" cy="408" r="40" stroke="currentColor" strokeWidth="3" opacity="0.32" />
+
+      <path d="M80 650H880" stroke="currentColor" strokeWidth="2" opacity="0.32" />
+      <circle cx="80" cy="650" r="7" fill="currentColor" />
+      <circle cx="880" cy="650" r="7" fill="currentColor" />
     </svg>
   );
 }
@@ -129,36 +132,60 @@ function PrimeCityArtwork() {
       xmlns="http://www.w3.org/2000/svg"
       focusable="false"
     >
-      <g stroke="currentColor" opacity="0.13">
+      <g stroke="currentColor" opacity="0.11">
         <path d="M0 120H960M0 240H960M0 360H960M0 480H960M0 600H960" />
         <path d="M120 0V720M240 0V720M360 0V720M480 0V720M600 0V720M720 0V720M840 0V720" />
       </g>
+
+      <text
+        x="72"
+        y="94"
+        fill="currentColor"
+        fontFamily="var(--font-geist-mono), monospace"
+        fontSize="18"
+        fontWeight="700"
+        letterSpacing="5"
+      >
+        PRIME / CITY
+      </text>
+      <path d="M72 126H360" stroke="currentColor" strokeWidth="3" opacity="0.55" />
+      <path d="M72 150H254" stroke="currentColor" strokeWidth="3" opacity="0.28" />
+
       <path
-        d="M95 553H273V387H417V211H593V345H795V553H865"
+        d="M72 572H239V430H392V238H566V350H756V572H887"
         stroke="currentColor"
-        strokeWidth="16"
+        strokeWidth="18"
+        strokeLinejoin="miter"
       />
       <path
-        d="M184 553V463H321V553M496 553V431H680V553"
+        d="M155 572V493H286V572M461 572V452H650V572"
         stroke="currentColor"
-        strokeWidth="5"
-        opacity="0.72"
+        strokeWidth="6"
+        opacity="0.64"
       />
-      <circle cx="95" cy="553" r="19" fill="currentColor" />
-      <circle cx="417" cy="211" r="19" fill="currentColor" />
-      <circle cx="795" cy="553" r="19" fill="currentColor" />
-      <circle cx="865" cy="553" r="9" fill="currentColor" opacity="0.62" />
+      <circle cx="72" cy="572" r="20" fill="currentColor" />
+      <circle cx="392" cy="238" r="20" fill="currentColor" />
+      <circle cx="756" cy="572" r="20" fill="currentColor" />
+      <circle cx="887" cy="572" r="9" fill="currentColor" opacity="0.62" />
+
       <path
-        d="M697 148C748 97 832 97 883 148M724 176C760 140 820 140 856 176M753 205C773 185 807 185 827 205"
+        d="M684 176C736 124 821 124 873 176M712 205C749 168 808 168 845 205M741 234C762 213 795 213 816 234"
         stroke="currentColor"
         strokeWidth="8"
         strokeLinecap="round"
       />
-      <rect x="773" y="227" width="33" height="33" fill="currentColor" />
-      <path d="M118 125H392" stroke="currentColor" strokeWidth="3" opacity="0.5" />
-      <path d="M118 157H304" stroke="currentColor" strokeWidth="3" opacity="0.3" />
-      <rect x="118" y="195" width="112" height="112" stroke="currentColor" strokeWidth="5" />
-      <path d="M148 251H200M174 225V277" stroke="currentColor" strokeWidth="8" />
+      <rect x="760" y="256" width="36" height="36" fill="currentColor" />
+
+      <rect x="72" y="212" width="122" height="122" stroke="currentColor" strokeWidth="5" />
+      <path d="M102 273H164M133 242V304" stroke="currentColor" strokeWidth="8" />
+
+      <path d="M72 648H888" stroke="currentColor" strokeWidth="2" opacity="0.34" />
+      <path d="M72 632V664M888 632V664" stroke="currentColor" strokeWidth="2" />
+      <g fill="currentColor">
+        <circle cx="475" cy="648" r="6" opacity="0.4" />
+        <circle cx="497" cy="648" r="6" opacity="0.68" />
+        <circle cx="519" cy="648" r="6" />
+      </g>
     </svg>
   );
 }

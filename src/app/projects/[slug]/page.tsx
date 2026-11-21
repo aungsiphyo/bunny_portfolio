@@ -11,6 +11,11 @@ type ProjectPageProps = Readonly<{
   params: Promise<{ slug: string }>;
 }>;
 
+// Each case study is entirely slug-specific. The pages are still prerendered
+// through generateStaticParams; this only opts the segment out of the shared
+// instant-shell validation used for URL-independent route UI.
+export const instant = false;
+
 export function generateStaticParams() {
   return caseStudyProjects.map((project) => ({ slug: project.slug }));
 }

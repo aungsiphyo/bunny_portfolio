@@ -18,13 +18,13 @@ export function Experience() {
           data-section-reveal
         >
           <p
-            className="pt-1 font-mono text-label font-semibold text-background/60"
+            className="pt-1 font-mono text-label font-semibold text-background/70"
             aria-hidden="true"
           >
             03
           </p>
           <div>
-            <p className="font-mono text-xs font-semibold tracking-[0.1em] text-background/65 uppercase">
+            <p className="font-mono text-xs font-semibold tracking-[0.1em] text-background/70 uppercase">
               Professional path
             </p>
             <h2
@@ -58,10 +58,10 @@ function ExperienceItem({ entry, index }: ExperienceItemProps) {
       data-section-reveal
     >
       <div className="flex items-start justify-between gap-6 lg:col-span-2">
-        <p className="font-mono text-xs font-semibold tracking-[0.1em] text-background/60 uppercase">
+        <p className="font-mono text-xs font-semibold tracking-[0.1em] text-background/70 uppercase">
           0{index + 1}
         </p>
-        <p className="font-mono text-xs font-semibold tracking-[0.1em] text-background/60 uppercase lg:hidden">
+        <p className="font-mono text-xs font-semibold tracking-[0.08em] text-background/70 uppercase lg:hidden">
           <ExperiencePeriod entry={entry} />
         </p>
       </div>
@@ -82,13 +82,13 @@ function ExperienceItem({ entry, index }: ExperienceItemProps) {
             <span className="sr-only"> (opens in a new tab)</span>
           </a>
         ) : null}
-        <p className="mt-6 hidden font-mono text-xs font-semibold tracking-[0.1em] text-background/60 uppercase lg:block">
+        <p className="mt-6 hidden font-mono text-xs font-semibold tracking-[0.1em] text-background/70 uppercase lg:block">
           <ExperiencePeriod entry={entry} />
         </p>
       </div>
 
       <div className="lg:col-span-5 lg:col-start-8">
-        <p className="font-mono text-xs font-semibold tracking-[0.1em] text-background/60 uppercase">
+        <p className="font-mono text-xs font-semibold tracking-[0.1em] text-background/70 uppercase">
           {entry.detailsLabel}
         </p>
         <ul className="mt-5 grid border-t border-background/20" role="list">

@@ -24,10 +24,15 @@ Exit criteria: the full static portfolio is complete, accurate, responsive, and 
 
 ### Deferred Phase 2 visual and motion QA
 
-- Improve pink primary CTA text/icon contrast using Deep Olive.
-- Review mobile eyebrow and navigation readability.
-- Perform GSAP motion and reduced-motion QA.
-- Recheck keyboard accessibility.
+- [x] Improve pink primary CTA text/icon contrast using Deep Olive.
+- [x] Review mobile eyebrow and navigation readability.
+- [x] Perform GSAP motion and reduced-motion QA.
+- [x] Recheck keyboard accessibility.
+
+Resolved during the Phase 5 visual-polish pass. The primary CTA now uses the
+semantic Deep Olive foreground, small mobile labels have stronger contrast, the
+mobile menu exposes explicit expanded state, and motion keeps a fully visible
+reduced-motion state.
 
 ## Phase 3 — Case studies
 
@@ -51,9 +56,12 @@ Exit criteria: motion improves hierarchy without delaying access to content or w
 
 ## Phase 5 — Quality and launch readiness
 
-- Final content and link review
-- Cross-browser and responsive QA
-- Accessibility review with keyboard and screen-reader spot checks
+- [x] Final content and link review
+- [x] Responsive QA at 375px, 395px, 768px, 1024px, and 1440px
+- [x] Accessibility review with keyboard spot checks and reduced-motion implementation review
+- [x] Refine temporary Uni Yatwon and Prime City cover artwork
+- [ ] Cross-browser QA outside the in-app Chromium browser
+- [ ] OS-level reduced-motion emulation outside the in-app browser
 - Performance, metadata, social image, sitemap, and robots review
 - Production build verification
 
@@ -64,7 +72,5 @@ Deployment, domain configuration, analytics, and pushing changes require separat
 - Profile photo
 - Original screenshots for each featured project
 - Any additional approved case-study narrative
-- Work experience entries and dates
-- Skills grouping and preferred ordering
 - Any approved demo URLs or additional project links
-- Final About and Contact copy
+- Final approval of the draft About copy
