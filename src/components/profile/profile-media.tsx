@@ -35,8 +35,7 @@ export function ProfileMedia({ media }: ProfileMediaProps) {
         <p className="text-[clamp(6rem,24vw,15rem)] leading-[0.72] font-semibold tracking-[-0.09em] text-decorative-rose">
           B.
         </p>
-        <div className="mt-8 flex items-center justify-between gap-5 font-mono text-xs font-semibold tracking-[0.1em] uppercase">
-          <span>Portrait pending</span>
+        <div className="mt-8 flex items-center justify-end gap-5 font-mono text-xs font-semibold tracking-[0.1em] uppercase">
           <span>Ko Si</span>
         </div>
       </div>

@@ -19,12 +19,18 @@ export function Hero() {
     <AnimatedHero>
       <HeroArtwork />
 
-      <Container className="relative z-10 flex min-h-svh flex-col pt-28 pb-7 sm:pt-32 sm:pb-9 lg:pt-36 lg:pb-12">
+      <Container className="relative z-10 flex min-h-svh flex-col pt-24 pb-6 sm:pt-28 sm:pb-8 lg:pt-32 lg:pb-10">
         <p
           className="max-w-[31rem] font-mono text-xs leading-relaxed font-semibold tracking-[0.09em] text-hero-foreground/85 uppercase sm:tracking-[0.11em]"
           data-hero-eyebrow
         >
           {hero.eyebrow}
+        </p>
+        <p
+          className="mt-4 text-lg font-semibold tracking-[-0.02em] text-hero-foreground/90 sm:text-xl lg:text-2xl"
+          data-hero-eyebrow
+        >
+          Bunny (Ko Si)
         </p>
 
         <div className="flex flex-1 items-center py-8 sm:py-10 lg:py-12">

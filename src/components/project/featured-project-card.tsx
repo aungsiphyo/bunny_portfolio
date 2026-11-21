@@ -33,31 +33,35 @@ export function FeaturedProjectCard({
       >
         <div className="flex items-start justify-between gap-6 font-mono text-xs font-semibold tracking-[0.08em] text-muted-foreground uppercase">
           <p>{project.category}</p>
-          <p aria-hidden="true">0{index + 1}</p>
         </div>
 
-        <h3 className="mt-6 text-[clamp(2.8rem,6.2vw,6.5rem)] leading-[0.88] font-semibold tracking-[-0.065em] text-balance">
+        <h3 className="mt-4 text-[clamp(1.75rem,3.6vw,3rem)] leading-[0.92] font-semibold tracking-[-0.04em] text-balance">
           {project.title}
         </h3>
 
-        <p className="mt-7 max-w-[58ch] text-base leading-relaxed text-muted-foreground sm:text-lg">
+        <p className="mt-5 max-w-[58ch] text-base leading-relaxed text-muted-foreground sm:text-lg">
           {project.overview}
         </p>
 
-        <div className="mt-8 border-t border-border pt-5">
+        <div className="mt-6 border-t border-border pt-5">
           <p className="font-mono text-xs font-semibold tracking-[0.08em] text-muted-foreground uppercase">
             Technology
           </p>
           <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5" aria-label="Technology stack">
-            {project.techStack.map((technology) => (
+            {project.techStack.slice(0, 5).map((technology) => (
               <li className="text-sm font-medium" key={technology}>
                 {technology}
               </li>
             ))}
           </ul>
+          {project.techStack.length > 5 && (
+            <p className="mt-2 text-xs text-muted-foreground">
+              +{project.techStack.length - 5} more in case study
+            </p>
+          )}
         </div>
 
-        <div className="mt-8 border-l-2 border-highlight pl-4">
+        <div className="mt-6 border-l-2 border-highlight pl-4">
           <p className="font-mono text-xs font-semibold tracking-[0.08em] text-muted-foreground uppercase">
             Outcome
           </p>
@@ -65,7 +69,7 @@ export function FeaturedProjectCard({
         </div>
 
         <Link
-          className="mt-8 inline-flex min-h-12 items-center gap-3 border-b border-foreground pb-1 font-semibold transition-colors hover:border-primary hover:text-primary"
+          className="mt-6 inline-flex min-h-12 items-center gap-3 border-b border-foreground pb-1 font-semibold transition-colors hover:border-primary hover:text-primary"
           href={`/projects/${project.slug}`}
         >
           View case study

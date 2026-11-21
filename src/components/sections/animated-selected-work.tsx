@@ -47,7 +47,7 @@ export function AnimatedSelectedWork({ children }: AnimatedSelectedWorkProps) {
     <section
       ref={sectionRef}
       id="work"
-      className="scroll-mt-20 bg-background py-20 text-foreground sm:py-28 lg:py-36"
+      className="scroll-mt-20 bg-background py-14 text-foreground sm:py-20 lg:py-24"
       aria-labelledby="work-title"
     >
       {children}

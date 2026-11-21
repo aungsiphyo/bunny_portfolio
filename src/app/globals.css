@@ -28,9 +28,9 @@
   --hero-accent: var(--palette-blush-pink);
   --hero-accent-foreground: var(--palette-deep-olive);
 
-  --type-display: clamp(4rem, 16vw, 11rem);
-  --type-hero: clamp(3.15rem, 8.65vw, 8rem);
-  --type-heading: clamp(2.5rem, 7vw, 6rem);
+  --type-display: clamp(2.75rem, 5.5vw, 4.5rem);
+  --type-hero: clamp(2.75rem, 7vw, 6.5rem);
+  --type-heading: clamp(2rem, 4.2vw, 3.5rem);
   --type-body-large: clamp(1.125rem, 1rem + 0.6vw, 1.5rem);
   --type-body: 1rem;
   --type-label: 0.8125rem;

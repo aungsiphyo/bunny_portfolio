@@ -7,40 +7,27 @@ export const skillCategories = [
     skills: ["React", "Next.js", "React Native"],
   },
   {
-    id: "backend",
-    title: "Backend",
-    skills: ["Node.js", "Express", "PHP"],
+    id: "backend-databases",
+    title: "Backend & Databases",
+    skills: ["Node.js", "Express", "PHP", "PostgreSQL", "MySQL", "MongoDB"],
   },
   {
-    id: "databases",
-    title: "Databases",
-    skills: ["PostgreSQL", "MySQL", "MongoDB", "MongoDB Atlas"],
-  },
-  {
-    id: "cloud",
-    title: "Cloud",
-    skills: ["AWS", "Vercel", "Render"],
-  },
-  {
-    id: "devops",
-    title: "DevOps",
+    id: "cloud-devops",
+    title: "Cloud & DevOps",
     skills: [
+      "AWS",
       "Docker",
       "GitHub Actions",
       "Nginx",
       "Linux",
-      "DNS",
-      "Server Administration",
+      "Vercel",
+      "Render",
     ],
   },
   {
-    id: "cms",
-    title: "CMS",
-    skills: ["Payload CMS"],
-  },
-  {
-    id: "iot-communication",
-    title: "IoT / Communication",
-    skills: ["MQTT", "HiveMQ", "HTTP"],
+    id: "cms-iot",
+    title: "CMS & IoT",
+    skills: ["Payload CMS", "MQTT", "HiveMQ"],
   },
 ] as const satisfies readonly SkillCategory[];
+

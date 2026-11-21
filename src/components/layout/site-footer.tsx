@@ -6,7 +6,7 @@ import { homeSections, siteConfig } from "@/data/site";
 export function SiteFooter() {
   return (
     <footer
-      className="border-t border-background/15 bg-foreground py-10 text-background sm:py-12"
+      className="border-t border-background/15 bg-foreground py-8 text-background sm:py-10"
       data-dark-surface
     >
       <Container>
