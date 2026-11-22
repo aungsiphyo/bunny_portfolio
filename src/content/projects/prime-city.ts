@@ -12,6 +12,12 @@ export const primeCityProject = {
   },
   overview:
     "A functional residential management prototype integrating web and mobile applications with physical IoT hardware.",
+  cardSummary:
+    "A university residential-management prototype connecting web, mobile, and physical IoT devices.",
+  cardContribution:
+    "Worked on frontend and mobile development, integrated MQTT with HiveMQ, and handled most server, CI/CD, and deployment work.",
+  cardOutcome:
+    "A working prototype tested by team members and teachers using real accounts.",
   purpose:
     "The university prototype connects residential management software with physical hardware across access, parking, safety, lighting, payments, visitors, and real-time device communication.",
   coreFeatures: [

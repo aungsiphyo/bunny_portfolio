@@ -12,6 +12,12 @@ export const uniYatwonProject = {
   },
   overview:
     "A university-focused social application where students can share campus activities, connect with friends, buy and sell textbooks, create posts, like, comment, save posts, and search profiles.",
+  cardSummary:
+    "A campus social platform for sharing university activities, connecting with friends, and exchanging textbooks.",
+  cardContribution:
+    "Co-developed the React and React Native frontend and independently handled production deployment on AWS EC2, including CI/CD.",
+  cardOutcome:
+    "Approximately 90 students registered and used it during a university showcase.",
   purpose:
     "Its purpose is to support university students sharing campus activities, connecting with friends, buying and selling textbooks, and discovering profiles.",
   coreFeatures: [

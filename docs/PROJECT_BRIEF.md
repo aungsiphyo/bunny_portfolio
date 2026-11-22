@@ -18,10 +18,14 @@ The home page will be organized in this order:
 
 1. Hero
 2. Selected Work
-3. About
-4. Experience
+3. Experience
+4. About
 5. Skills
 6. Contact
+
+This order prioritizes the evidence recruiters typically scan first: role,
+projects, and professional experience. The About section then adds working
+style and context before the technical toolkit and contact prompt.
 
 Selected projects use two levels of presentation:
 
@@ -55,9 +59,9 @@ The project summaries in `src/content/projects/index.ts` intentionally contain o
 - Next.js App Router, TypeScript, and Tailwind CSS
 - Server Components by default; small Client Component islands only for real interactivity or animation
 - Static, typed modules for site and project content
-- `next/font` for the current self-hosted font foundation
+- `next/font` for the current font foundation
 - Semantic HTML, mobile-first layout, keyboard access, and reduced-motion support from the start
-- GSAP and Lucide React deferred until a concrete later-phase use case requires them
+- GSAP for narrowly scoped progressive motion and Lucide React for interface icons
 
 No database, CMS, authentication, or server API is needed for the current scope.
 
@@ -77,6 +81,8 @@ src/
 └── types/                     # Shared content contracts
 ```
 
-## Phase 1 boundary
+## Current content boundary
 
-This phase establishes documentation, tokens, typography, typed data, and a small static shell to prove the foundation. It does not include the full portfolio, case-study routes, supplied photography, project screenshots, or GSAP animation.
+The portfolio includes the full homepage, portrait, and two detailed case-study
+routes. Authentic project screenshots, education details, and a resume remain
+absent until Bunny provides and verifies those assets and facts.

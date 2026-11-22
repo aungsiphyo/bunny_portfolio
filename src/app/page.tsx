@@ -18,8 +18,8 @@ export default function Home() {
         <Hero />
         <SelectedWork />
         <AnimatedContentSections>
-          <About />
           <Experience />
+          <About />
           <Skills />
           <Contact />
         </AnimatedContentSections>

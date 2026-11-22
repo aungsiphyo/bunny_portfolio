@@ -8,8 +8,8 @@ export const profileContent = {
   positioning: siteConfig.positioning,
   currentStatus: freelanceExperience.role,
   introduction: [
-    "Hey, I'm Bunny (Ko Si), a freelance software engineer who enjoys building complete digital products — from responsive interfaces and backend integrations to cloud infrastructure and deployment.",
-    "I care about creating thoughtful user experiences, building reliable systems, and turning ideas into working applications.",
+    "Hey, I'm Bunny (Ko Si), a freelance software engineer working across the full lifecycle of a product — from responsive interfaces and backend integrations to deployment.",
+    "I enjoy creating thoughtful user experiences and managing the cloud infrastructure that keeps applications running.",
   ],
   freelanceAreas: [
     "Frontend development",

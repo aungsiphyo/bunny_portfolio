@@ -14,7 +14,7 @@ export const siteConfig = {
     role: ["Software", "Engineer."],
     positioning: "Software Engineer | Cloud & DevOps Enthusiast",
     supportingText:
-      "Building thoughtful digital experiences, from interface to infrastructure.",
+      "Building modern web experiences and the infrastructure behind them.",
     primaryCta: {
       label: "View My Work",
       href: "#work",
@@ -38,15 +38,15 @@ export const siteConfig = {
 
 export const primaryNavigation = [
   { label: "Work", href: "#work" },
+  { label: "Experience", href: "#experience" },
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ] as const satisfies readonly NavigationItem[];
 
 export const homeSections = [
   { label: "Selected Work", href: "#work" },
-  { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
+  { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ] as const satisfies readonly NavigationItem[];

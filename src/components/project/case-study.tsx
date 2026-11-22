@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 
 import { ProjectCover } from "@/components/project/project-cover";
+import { ProjectGallery } from "@/components/project/project-gallery";
 import { ProjectHeader } from "@/components/project/project-header";
 import { SkipLink } from "@/components/layout/skip-link";
 import { Container } from "@/components/ui/container";
@@ -42,6 +43,33 @@ export function CaseStudy({ project }: CaseStudyProps) {
                 </p>
               </div>
 
+              <dl className="mt-10 grid border-y border-border sm:grid-cols-3">
+                <div className="py-5 sm:pr-6">
+                  <dt className="font-mono text-[0.68rem] font-semibold tracking-[0.08em] text-muted-foreground uppercase">
+                    My contribution
+                  </dt>
+                  <dd className="mt-2 text-sm leading-relaxed">
+                    {project.cardContribution}
+                  </dd>
+                </div>
+                <div className="border-t border-border py-5 sm:border-l sm:border-t-0 sm:px-6">
+                  <dt className="font-mono text-[0.68rem] font-semibold tracking-[0.08em] text-muted-foreground uppercase">
+                    Verified result
+                  </dt>
+                  <dd className="mt-2 text-sm leading-relaxed">
+                    {project.cardOutcome}
+                  </dd>
+                </div>
+                <div className="border-t border-border py-5 sm:border-l sm:border-t-0 sm:pl-6">
+                  <dt className="font-mono text-[0.68rem] font-semibold tracking-[0.08em] text-muted-foreground uppercase">
+                    Selected stack
+                  </dt>
+                  <dd className="mt-2 text-sm leading-relaxed">
+                    {project.techStack.slice(0, 5).join(" · ")}
+                  </dd>
+                </div>
+              </dl>
+
               <div className="group mt-12 sm:mt-16 lg:mt-20">
                 <ProjectCover
                   cover={project.cover}
@@ -51,6 +79,13 @@ export function CaseStudy({ project }: CaseStudyProps) {
               </div>
             </Container>
           </header>
+
+          {project.screenshots ? (
+            <ProjectGallery
+              projectTitle={project.title}
+              screenshots={project.screenshots}
+            />
+          ) : null}
 
           <div className="py-16 sm:py-24 lg:py-32">
             <Container className="grid gap-16 lg:grid-cols-12 lg:gap-x-12 lg:gap-y-28">
@@ -62,26 +97,8 @@ export function CaseStudy({ project }: CaseStudyProps) {
                 </NumberedSection>
               </div>
 
-              <div className="lg:col-span-5 lg:col-start-7">
-                <NumberedSection number="02" title="Core features">
-                  <ul className="grid border-t border-border" role="list">
-                    {project.coreFeatures.map((feature) => (
-                      <li
-                        className="flex gap-4 border-b border-border py-4 leading-relaxed"
-                        key={feature}
-                      >
-                        <span className="text-muted-foreground" aria-hidden="true">
-                          —
-                        </span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </NumberedSection>
-              </div>
-
               <div className="lg:col-span-7 lg:col-start-2">
-                <NumberedSection number="03" title="My contributions">
+                <NumberedSection number="02" title="My contributions">
                   <ol className="grid gap-7">
                     {project.contributions.map((contribution, index) => (
                       <li
@@ -98,6 +115,24 @@ export function CaseStudy({ project }: CaseStudyProps) {
                       </li>
                     ))}
                   </ol>
+                </NumberedSection>
+              </div>
+
+              <div className="lg:col-span-5 lg:col-start-7">
+                <NumberedSection number="03" title="Core features">
+                  <ul className="grid border-t border-border" role="list">
+                    {project.coreFeatures.map((feature) => (
+                      <li
+                        className="flex gap-4 border-b border-border py-4 leading-relaxed"
+                        key={feature}
+                      >
+                        <span className="text-muted-foreground" aria-hidden="true">
+                          —
+                        </span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </NumberedSection>
               </div>
 

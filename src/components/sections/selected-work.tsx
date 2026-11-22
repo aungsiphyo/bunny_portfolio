@@ -19,8 +19,8 @@ export function SelectedWork() {
             Selected work
           </h2>
           <p className="max-w-[42ch] text-muted-foreground lg:col-span-4 lg:col-start-9">
-            A selection of products built across interfaces, backend systems,
-            cloud infrastructure, and deployment.
+            Selected applications showing frontend engineering, systems
+            integration, and deployment ownership.
           </p>
         </header>
 

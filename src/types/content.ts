@@ -113,6 +113,14 @@ export type ProjectCover =
       height: number;
     }>;
 
+export type ProjectScreenshot = Readonly<{
+  src: `/${string}`;
+  alt: string;
+  caption: string;
+  width: number;
+  height: number;
+}>;
+
 export type CaseStudyProject = Readonly<{
   slug: string;
   title: string;
@@ -121,12 +129,16 @@ export type CaseStudyProject = Readonly<{
   visualIdentity: ProjectVisualIdentity;
   cover: ProjectCover;
   overview: string;
+  cardSummary: string;
+  cardContribution: string;
+  cardOutcome: string;
   purpose: string;
   coreFeatures: NonEmptyReadonlyArray<string>;
   techStack: NonEmptyReadonlyArray<string>;
   contributions: NonEmptyReadonlyArray<string>;
   outcome: string;
   repositories: NonEmptyReadonlyArray<ProjectRepository>;
+  screenshots?: NonEmptyReadonlyArray<ProjectScreenshot>;
   statusNote?: string;
 }>;
 

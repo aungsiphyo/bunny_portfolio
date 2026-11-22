@@ -17,8 +17,8 @@ export function Experience() {
             Experience
           </h2>
           <p className="max-w-[38ch] text-muted-foreground lg:col-span-4 lg:col-start-9">
-            Professional experience across product interfaces, full-stack work,
-            and deployment.
+            Product experience spanning React interfaces, content systems,
+            full-stack development, and deployment.
           </p>
         </header>
 

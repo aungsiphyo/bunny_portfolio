@@ -65,6 +65,34 @@ Exit criteria: motion improves hierarchy without delaying access to content or w
 - Performance, metadata, social image, sitemap, and robots review
 - Production build verification
 
+## Recruiter-focused refinement
+
+- [x] Order homepage evidence as Hero → Selected Work → Experience → About → Skills → Contact.
+- [x] Add Experience to primary navigation and recheck section anchors.
+- [x] Surface verified personal contribution and outcome evidence on featured project cards.
+- [x] Prioritize contributions before feature inventories in detailed case studies.
+- [x] Keep scroll-reveal motion visible during rapid scrolling by animating only a short transform.
+- [x] Add a typed, conditional screenshot gallery that renders only when authentic assets exist.
+- [ ] Add a compact Education entry after Bunny verifies the institution, degree or major, and attendance or graduation dates.
+- [ ] Add a Download Resume link after an approved PDF is supplied and checked.
+- [ ] Verify the specific technical challenges and technology rationale for each case study before publishing an engineering-decisions section.
+- [ ] Verify whether the public names “Hcitepyoe Matesway” and “Lanpya” need any alternate spelling or supporting product descriptions.
+
+### Project screenshot asset requirements
+
+The gallery contract is ready in `src/types/content.ts`, but no gallery is
+rendered until each image has verified alt text, caption, and natural pixel
+dimensions. Supply original, unfiltered images at these paths (or approve an
+equivalent WebP naming scheme):
+
+- `public/images/projects/uni-yatwon/01.png`
+- `public/images/projects/uni-yatwon/02.png`
+- `public/images/projects/prime-city/01.png`
+- `public/images/projects/prime-city/02.png`
+
+After assets arrive, add their metadata to the appropriate typed project module.
+Do not crop or recolor product screenshots merely to make aspect ratios match.
+
 Deployment, domain configuration, analytics, and pushing changes require separate approval.
 
 ## Content still required
@@ -73,3 +101,6 @@ Deployment, domain configuration, analytics, and pushing changes require separat
 - Any additional approved case-study narrative
 - Any approved demo URLs or additional project links
 - Final approval of the draft About copy
+- Verified university, degree or major, and education dates
+- Approved resume PDF
+- Verified case-study technical challenges and technology rationale

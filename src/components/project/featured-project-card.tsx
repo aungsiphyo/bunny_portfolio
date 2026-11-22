@@ -37,8 +37,27 @@ export function FeaturedProjectCard({ project }: FeaturedProjectCardProps) {
         </div>
 
         <p className="mt-4 max-w-[58ch] leading-relaxed text-muted-foreground">
-          {project.overview}
+          {project.cardSummary}
         </p>
+
+        <dl className="mt-5 grid gap-4 border-t border-border pt-5 sm:grid-cols-2">
+          <div>
+            <dt className="font-mono text-[0.68rem] font-semibold tracking-[0.08em] text-muted-foreground uppercase">
+              My contribution
+            </dt>
+            <dd className="mt-2 max-w-[48ch] text-sm leading-relaxed">
+              {project.cardContribution}
+            </dd>
+          </div>
+          <div>
+            <dt className="font-mono text-[0.68rem] font-semibold tracking-[0.08em] text-muted-foreground uppercase">
+              Verified result
+            </dt>
+            <dd className="mt-2 max-w-[48ch] text-sm leading-relaxed">
+              {project.cardOutcome}
+            </dd>
+          </div>
+        </dl>
 
         <ul className="mt-5 flex flex-wrap gap-2" aria-label="Selected technology stack">
           {project.techStack.slice(0, 4).map((technology) => (
