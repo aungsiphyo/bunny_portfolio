@@ -46,7 +46,7 @@ export function AnimatedWordmark() {
 
   return (
     <Link
-      className="relative z-10 inline-flex min-h-11 items-center text-xl font-semibold tracking-[-0.06em] text-background transition-colors hover:text-surface"
+      className="relative z-10 inline-flex min-h-11 items-center text-xl font-semibold tracking-[-0.06em] text-foreground transition-colors hover:text-primary"
       href="/"
       aria-label="Bunny, home"
     >

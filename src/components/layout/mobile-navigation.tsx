@@ -37,7 +37,7 @@ export function MobileNavigation({ items }: MobileNavigationProps) {
       <button
         ref={buttonRef}
         type="button"
-        className="flex min-h-11 min-w-11 items-center justify-center rounded-full border border-background/45 bg-background/[0.06] text-background transition-colors hover:border-surface hover:text-surface motion-reduce:transition-none"
+        className="flex min-h-11 min-w-11 items-center justify-center rounded-full border border-foreground/25 bg-background text-foreground transition-colors hover:border-primary hover:text-primary motion-reduce:transition-none"
         aria-controls="mobile-navigation-panel"
         aria-expanded={isOpen}
         aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
@@ -53,15 +53,15 @@ export function MobileNavigation({ items }: MobileNavigationProps) {
       {isOpen ? (
         <div
           id="mobile-navigation-panel"
-          className="fixed inset-x-5 top-[5rem] max-h-[calc(100dvh-6.25rem)] overflow-y-auto border border-foreground/25 bg-surface p-3 text-surface-foreground shadow-2xl shadow-foreground/20"
+          className="fixed inset-x-5 top-[5rem] max-h-[calc(100dvh-6.25rem)] overflow-y-auto rounded-2xl border border-foreground/15 bg-background p-3 text-foreground shadow-2xl shadow-foreground/15"
           data-light-surface
         >
           <nav aria-label="Mobile primary navigation">
-            <ul className="divide-y divide-foreground/20">
+            <ul className="divide-y divide-foreground/12">
               {items.map((item, index) => (
                 <li key={item.href}>
                   <a
-                    className="flex min-h-16 items-center justify-between gap-6 px-3 font-semibold tracking-[-0.03em] transition-colors hover:bg-foreground/[0.06] motion-reduce:transition-none"
+                    className="flex min-h-16 items-center justify-between gap-6 rounded-xl px-3 font-semibold tracking-[-0.03em] transition-colors hover:bg-surface/45 motion-reduce:transition-none"
                     href={item.href}
                     onClick={closeMenu}
                   >

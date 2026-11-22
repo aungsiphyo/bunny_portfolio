@@ -27,49 +27,30 @@ export function AnimatedHero({ children }: AnimatedHeroProps) {
       const media = gsap.matchMedia();
 
       media.add("(prefers-reduced-motion: no-preference)", () => {
-        const primaryLine = hero.querySelector<HTMLElement>(
-          '[data-hero-line="primary"]',
+        const portrait = hero.querySelector<HTMLElement>("[data-hero-portrait]");
+        const shape = hero.querySelector<HTMLElement>("[data-hero-shape]");
+        const splitTargets = gsap.utils.toArray<HTMLElement>(
+          "[data-hero-name], [data-hero-role-line]",
         );
-        const accentLine = hero.querySelector<HTMLElement>(
-          '[data-hero-line="accent"]',
-        );
-        const artwork = hero.querySelector<HTMLElement>("[data-hero-art]");
 
-        const intro = gsap.timeline({
-          defaults: { ease: "power3.out" },
-        });
-
-        intro
+        gsap
+          .timeline({ defaults: { ease: "power3.out" } })
+          .from("[data-hero-intro]", { autoAlpha: 0, duration: 0.45, y: 12 })
+          .from(shape, { duration: 0.7, scale: 0.88 }, 0.1)
           .from(
-            "[data-hero-eyebrow]",
-            { duration: 0.45, opacity: 0, y: 14 },
-            0.05,
+            portrait,
+            { autoAlpha: 0, clipPath: "inset(100% 0 0 0)", duration: 0.9, y: 24 },
+            0.28,
           )
-          .from(artwork, { duration: 1.1, opacity: 0 }, 0.1)
-          .from(
-            "[data-hero-support]",
-            { duration: 0.5, opacity: 0, y: 16 },
-            0.7,
-          )
+          .from("[data-hero-support]", { autoAlpha: 0, duration: 0.45, y: 12 }, 0.85)
           .from(
             "[data-hero-cta]",
-            {
-              clearProps: "opacity,transform",
-              duration: 0.48,
-              opacity: 0,
-              stagger: 0.07,
-              y: 14,
-            },
-            0.82,
-          )
-          .from(
-            "[data-hero-scroll]",
-            { duration: 0.42, opacity: 0, y: 8 },
-            1.02,
+            { autoAlpha: 0, duration: 0.4, stagger: 0.07, y: 10 },
+            0.95,
           );
 
-        if (primaryLine) {
-          SplitText.create(primaryLine, {
+        splitTargets.forEach((target, index) => {
+          SplitText.create(target, {
             type: "lines",
             mask: "lines",
             tag: "span",
@@ -79,49 +60,25 @@ export function AnimatedHero({ children }: AnimatedHeroProps) {
             onSplit(split) {
               return gsap.from(split.lines, {
                 autoAlpha: 0,
-                delay: 0.12,
-                duration: 0.78,
+                delay: 0.12 + index * 0.1,
+                duration: 0.75,
                 ease: "power4.out",
                 stagger: 0.08,
-                yPercent: 115,
+                yPercent: 110,
               });
             },
           });
-        }
+        });
 
-        if (accentLine) {
-          SplitText.create(accentLine, {
-            type: "lines",
-            mask: "lines",
-            tag: "span",
-            aria: "none",
-            autoSplit: true,
-            linesClass: "hero-split-line",
-            onSplit(split) {
-              return gsap.from(split.lines, {
-                autoAlpha: 0,
-                delay: 0.3,
-                duration: 0.86,
-                ease: "expo.out",
-                rotate: 1.25,
-                scaleY: 0.82,
-                stagger: 0.08,
-                transformOrigin: "50% 100%",
-                yPercent: 125,
-              });
-            },
-          });
-        }
-
-        if (artwork) {
-          gsap.to(artwork, {
+        if (portrait) {
+          gsap.to(portrait, {
             ease: "none",
-            yPercent: 10,
+            yPercent: 4,
             scrollTrigger: {
               trigger: hero,
               start: "top top",
               end: "bottom top",
-              scrub: 0.6,
+              scrub: 0.5,
             },
           });
         }
@@ -135,9 +92,9 @@ export function AnimatedHero({ children }: AnimatedHeroProps) {
   return (
     <section
       ref={heroRef}
-      className="relative isolate min-h-svh overflow-hidden bg-hero-background text-hero-foreground"
+      className="relative isolate overflow-hidden bg-background text-foreground"
       aria-labelledby="hero-title"
-      data-dark-surface
+      data-light-surface
     >
       {children}
     </section>

@@ -73,3 +73,4 @@ Use sentence case for headings. Keep long-form copy near `65ch`; display text ma
 - Use `next/image` with accurate dimensions and responsive `sizes` once assets arrive.
 - Preserve each image's natural aspect ratio unless an explicitly art-directed crop is approved.
 - Provide concise, contextual alt text. Use `alt=""` only when an image is genuinely decorative and adjacent text conveys all of its meaning.
+- The homepage portrait cutout lives at `public/images/bunny-portrait.png` and is referenced from `src/content/profile.ts`. Its current source dimensions are `1254 × 1254`; future replacements should be transparent PNG or WebP assets at approximately `1600 × 2000` or larger, with the full upper body retained and comfortable space around the hair and shoulders.

@@ -9,7 +9,15 @@ export const skillCategories = [
   {
     id: "backend-databases",
     title: "Backend & Databases",
-    skills: ["Node.js", "Express", "PHP", "PostgreSQL", "MySQL", "MongoDB"],
+    skills: [
+      "Node.js",
+      "Express",
+      "PHP",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "MongoDB Atlas",
+    ],
   },
   {
     id: "cloud-devops",
@@ -20,6 +28,8 @@ export const skillCategories = [
       "GitHub Actions",
       "Nginx",
       "Linux",
+      "DNS",
+      "Server Administration",
       "Vercel",
       "Render",
     ],
@@ -27,7 +37,6 @@ export const skillCategories = [
   {
     id: "cms-iot",
     title: "CMS & IoT",
-    skills: ["Payload CMS", "MQTT", "HiveMQ"],
+    skills: ["Payload CMS", "MQTT", "HiveMQ", "HTTP"],
   },
 ] as const satisfies readonly SkillCategory[];
-

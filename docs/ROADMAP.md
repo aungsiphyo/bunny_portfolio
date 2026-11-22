@@ -69,7 +69,6 @@ Deployment, domain configuration, analytics, and pushing changes require separat
 
 ## Content still required
 
-- Profile photo
 - Original screenshots for each featured project
 - Any additional approved case-study narrative
 - Any approved demo URLs or additional project links

@@ -23,14 +23,14 @@
   --highlight-foreground: var(--palette-deep-olive);
   --decorative-rose: var(--palette-dusty-rose);
   --focus-ring: var(--palette-burgundy);
-  --hero-background: var(--palette-deep-olive);
-  --hero-foreground: var(--palette-warm-cream);
+  --hero-background: var(--palette-warm-cream);
+  --hero-foreground: var(--palette-deep-olive);
   --hero-accent: var(--palette-blush-pink);
   --hero-accent-foreground: var(--palette-deep-olive);
 
-  --type-display: clamp(2.75rem, 5.5vw, 4.5rem);
-  --type-hero: clamp(2.75rem, 7vw, 6.5rem);
-  --type-heading: clamp(2rem, 4.2vw, 3.5rem);
+  --type-display: clamp(2.5rem, 5vw, 4rem);
+  --type-hero: clamp(3.75rem, 11vw, 9rem);
+  --type-heading: clamp(2rem, 3.8vw, 3.25rem);
   --type-body-large: clamp(1.125rem, 1rem + 0.6vw, 1.5rem);
   --type-body: 1rem;
   --type-label: 0.8125rem;
@@ -142,7 +142,87 @@ a {
 }
 
 .hero-primary-cta {
-  color: var(--hero-accent-foreground);
+  color: var(--palette-warm-cream) !important;
+}
+
+.group:hover .featured-project-arrow {
+  color: var(--palette-warm-cream) !important;
+}
+
+.hero-identity {
+  min-height: 31rem;
+  padding-block: clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.hero-identity-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.hero-name {
+  font-size: clamp(4.4rem, 18vw, 8rem);
+  line-height: 0.78;
+  letter-spacing: -0.085em;
+}
+
+.hero-role {
+  font-size: clamp(3rem, 13vw, 3.5rem);
+  line-height: 0.76;
+  letter-spacing: -0.08em;
+}
+
+.hero-portrait {
+  bottom: 6.25rem !important;
+  height: 64%;
+  width: min(82vw, 25rem);
+}
+
+@media (min-width: 640px) {
+  .hero-identity {
+    min-height: 35rem;
+  }
+
+  .hero-name {
+    font-size: clamp(6.5rem, 15vw, 10rem);
+  }
+
+  .hero-role {
+    font-size: clamp(4rem, 9vw, 5rem);
+    line-height: 0.8;
+  }
+
+  .hero-portrait {
+    bottom: 11rem !important;
+    height: 65%;
+    width: min(54vw, 30rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-identity {
+    min-height: 33rem;
+  }
+
+  .hero-name {
+    font-size: clamp(7rem, 11.6vw, 10.5rem);
+  }
+
+  .hero-role {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 14rem;
+    padding-bottom: 1rem;
+    font-size: clamp(4.75rem, 6.8vw, 6.15rem);
+  }
+
+  .hero-portrait {
+    bottom: 0 !important;
+    height: 104%;
+    width: min(38vw, 35rem);
+  }
 }
 
 .project-cover--uni-yatwon {

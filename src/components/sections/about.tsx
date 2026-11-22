@@ -1,4 +1,3 @@
-import { ProfileMedia } from "@/components/profile/profile-media";
 import { Container } from "@/components/ui/container";
 import { profileContent } from "@/content/profile";
 
@@ -6,60 +5,52 @@ export function About() {
   return (
     <section
       id="about"
-      className="scroll-mt-20 border-t border-border bg-background py-14 text-foreground sm:py-20 lg:py-24"
+      className="scroll-mt-20 bg-foreground py-16 text-background sm:py-20 lg:py-24"
       aria-labelledby="about-title"
+      data-dark-surface
     >
       <Container>
-        <header data-section-reveal>
-          <h2
-            id="about-title"
-            className="max-w-[12ch] text-display font-semibold tracking-tight text-balance"
-          >
-            About Bunny
-          </h2>
-        </header>
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+          <header className="lg:col-span-4" data-section-reveal>
+            <p className="text-sm font-semibold text-background/65">About me</p>
+            <h2
+              id="about-title"
+              className="mt-3 max-w-[10ch] text-heading font-semibold text-balance"
+            >
+              A little about Bunny.
+            </h2>
+          </header>
 
-        <div className="mt-10 grid gap-12 sm:mt-14 lg:mt-16 lg:grid-cols-12 lg:items-start lg:gap-10">
-          <div className="lg:col-span-5" data-section-reveal>
-            <ProfileMedia media={profileContent.media} />
-          </div>
-
-          <div className="lg:col-span-6 lg:col-start-7 lg:pt-10">
+          <div className="lg:col-span-7 lg:col-start-6">
             <p
-              className="max-w-[30ch] text-[clamp(1.5rem,2.8vw,2.25rem)] leading-[1.02] font-semibold tracking-[-0.045em] text-balance"
+              className="max-w-[32ch] text-[clamp(1.5rem,2.7vw,2.35rem)] leading-[1.08] font-medium tracking-[-0.04em] text-balance"
               data-section-reveal
             >
               {profileContent.positioning}
             </p>
 
             <div
-              className="mt-10 grid gap-6 border-t border-border pt-7 text-lg leading-relaxed text-muted-foreground sm:text-xl"
+              className="mt-8 grid gap-5 text-base leading-relaxed text-background/78 sm:text-lg"
               data-section-reveal
             >
               {profileContent.introduction.map((paragraph) => (
-                <p className="max-w-[61ch]" key={paragraph}>
+                <p className="max-w-[62ch]" key={paragraph}>
                   {paragraph}
                 </p>
               ))}
             </div>
 
             <div
-              className="mt-10 grid gap-8 border-l-2 border-decorative-rose pl-5 sm:grid-cols-2 sm:gap-10"
+              className="mt-10 grid gap-7 border-t border-background/20 pt-7 sm:grid-cols-2"
               data-section-reveal
             >
               <div>
-                <p className="font-mono text-xs font-semibold tracking-[0.1em] text-muted-foreground uppercase">
-                  Current status
-                </p>
-                <p className="mt-3 text-lg font-semibold">
-                  {profileContent.currentStatus}
-                </p>
+                <p className="text-sm text-background/60">Current</p>
+                <p className="mt-2 font-semibold">{profileContent.currentStatus}</p>
               </div>
               <div>
-                <p className="font-mono text-xs font-semibold tracking-[0.1em] text-muted-foreground uppercase">
-                  Freelance focus
-                </p>
-                <ul className="mt-3 grid gap-1" role="list">
+                <p className="text-sm text-background/60">Focus</p>
+                <ul className="mt-2 grid gap-1 text-background/85" role="list">
                   {profileContent.freelanceAreas.map((area) => (
                     <li key={area}>{area}</li>
                   ))}

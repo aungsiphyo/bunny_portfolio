@@ -25,7 +25,7 @@ export function AnimatedSelectedWork({ children }: AnimatedSelectedWorkProps) {
         reveals.forEach((element) => {
           gsap.from(element, {
             clearProps: "opacity,transform",
-            duration: 0.62,
+            duration: 0.56,
             ease: "power3.out",
             opacity: 0,
             scrollTrigger: {
@@ -33,7 +33,7 @@ export function AnimatedSelectedWork({ children }: AnimatedSelectedWorkProps) {
               start: "top 88%",
               once: true,
             },
-            y: 24,
+            y: 16,
           });
         });
       });
@@ -47,7 +47,7 @@ export function AnimatedSelectedWork({ children }: AnimatedSelectedWorkProps) {
     <section
       ref={sectionRef}
       id="work"
-      className="scroll-mt-20 bg-background py-14 text-foreground sm:py-20 lg:py-24"
+      className="scroll-mt-20 bg-background py-16 text-foreground sm:py-20 lg:py-24"
       aria-labelledby="work-title"
     >
       {children}

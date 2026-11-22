@@ -26,7 +26,7 @@ The home page will be organized in this order:
 Selected projects use two levels of presentation:
 
 - Detailed case studies: Uni Yatwon and Prime City
-- Compact project cards: စိုက်ပျိုးမိတ်ဆွေ (ASEAN Geo AI Fusion 2026) and Let's Tech Hackathon
+- Compact project cards: Hcitepyoe Matesway (ASEAN Geo AI Fusion 2026) and Lanpya (Let's Tech Hackathon)
 
 Case studies should eventually have dedicated routes under `/projects/[slug]`. The homepage should summarize and link to them rather than duplicate full case-study content.
 

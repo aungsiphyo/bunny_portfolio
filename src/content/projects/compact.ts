@@ -2,7 +2,7 @@ import type { CompactProject } from "@/types/content";
 
 export const saikPyoMateSweProject = {
   slug: "saik-pyo-mate-swe",
-  title: "စိုက်ပျိုးမိတ်ဆွေ",
+  title: "Hcitepyoe Matesway",
   context: "ASEAN Geo AI Fusion 2026",
   presentation: "compact",
   contributions: [
@@ -16,7 +16,7 @@ export const saikPyoMateSweProject = {
 
 export const letsTechHackathonProject = {
   slug: "lets-tech-hackathon",
-  title: "Let's Tech Hackathon",
+  title: "Lanpya",
   context: "48-hour agentic AI hackathon",
   presentation: "compact",
   contributions: [

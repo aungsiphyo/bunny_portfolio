@@ -11,8 +11,10 @@ export type NavigationItem = Readonly<{
 }>;
 
 export type HeroContent = Readonly<{
-  eyebrow: string;
-  headline: readonly [string, string];
+  introduction: string;
+  name: string;
+  role: readonly [string, string];
+  positioning: string;
   supportingText: string;
   primaryCta: NavigationItem;
   secondaryCta: NavigationItem;

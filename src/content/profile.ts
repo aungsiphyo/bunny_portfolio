@@ -17,6 +17,10 @@ export const profileContent = {
     "Cloud infrastructure and deployment",
   ],
   media: {
-    kind: "placeholder",
+    kind: "image",
+    src: "/images/bunny-portrait.png",
+    alt: "Portrait of Bunny (Ko Si)",
+    width: 1254,
+    height: 1254,
   },
 } as const satisfies ProfileContent;

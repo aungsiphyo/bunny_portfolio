@@ -9,16 +9,18 @@ export const siteConfig = {
   positioning: "Software Engineer | Cloud & DevOps Enthusiast",
   email: "aungsiphyoit@gmail.com",
   hero: {
-    eyebrow: "SOFTWARE ENGINEER · CLOUD & DEVOPS ENTHUSIAST",
-    headline: ["I craft the experience.", "I engineer the rest."],
+    introduction: "Hello, I'm Bunny (Ko Si)",
+    name: "Bunny.",
+    role: ["Software", "Engineer."],
+    positioning: "Software Engineer | Cloud & DevOps Enthusiast",
     supportingText:
-      "From expressive interfaces to reliable infrastructure — bringing ideas to life through code.",
+      "Building thoughtful digital experiences, from interface to infrastructure.",
     primaryCta: {
       label: "View My Work",
       href: "#work",
     },
     secondaryCta: {
-      label: "Get in Touch",
+      label: "Let's Talk",
       href: "#contact",
     },
   },

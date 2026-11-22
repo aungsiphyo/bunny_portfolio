@@ -9,7 +9,7 @@ type ProjectCoverProps = Readonly<{
 }>;
 
 const formatClassNames = {
-  card: "aspect-[4/3] sm:aspect-[16/10]",
+  card: "aspect-[4/3] sm:aspect-[5/4]",
   "case-study": "aspect-[4/3] sm:aspect-[16/9]",
 } as const;
 
@@ -68,14 +68,7 @@ function UniYatwonArtwork() {
       xmlns="http://www.w3.org/2000/svg"
       focusable="false"
     >
-      <g stroke="currentColor" strokeWidth="1" opacity="0.12">
-        <path d="M0 120H960M0 600H960" />
-        <path d="M120 0V720M840 0V720" />
-      </g>
-
-      <circle cx="782" cy="98" r="210" fill="currentColor" opacity="0.07" />
-      <circle cx="782" cy="98" r="126" stroke="currentColor" opacity="0.3" />
-      <circle cx="782" cy="98" r="12" fill="currentColor" />
+      <circle cx="782" cy="98" r="210" fill="currentColor" opacity="0.06" />
 
       <text
         x="82"
@@ -88,9 +81,6 @@ function UniYatwonArtwork() {
       >
         UNI / YATWON
       </text>
-
-      <path d="M82 151H366" stroke="currentColor" strokeWidth="3" opacity="0.55" />
-      <path d="M82 174H262" stroke="currentColor" strokeWidth="3" opacity="0.3" />
 
       <path
         d="M101 289V449C101 544 163 603 258 603C353 603 415 544 415 449V289"
@@ -112,13 +102,6 @@ function UniYatwonArtwork() {
       <circle cx="258" cy="529" r="22" fill="var(--project-accent)" />
       <circle cx="541" cy="503" r="22" fill="var(--project-accent)" />
       <circle cx="848" cy="408" r="22" fill="var(--project-accent)" />
-      <circle cx="258" cy="529" r="40" stroke="currentColor" strokeWidth="3" opacity="0.32" />
-      <circle cx="541" cy="503" r="40" stroke="currentColor" strokeWidth="3" opacity="0.32" />
-      <circle cx="848" cy="408" r="40" stroke="currentColor" strokeWidth="3" opacity="0.32" />
-
-      <path d="M80 650H880" stroke="currentColor" strokeWidth="2" opacity="0.32" />
-      <circle cx="80" cy="650" r="7" fill="currentColor" />
-      <circle cx="880" cy="650" r="7" fill="currentColor" />
     </svg>
   );
 }
@@ -132,11 +115,6 @@ function PrimeCityArtwork() {
       xmlns="http://www.w3.org/2000/svg"
       focusable="false"
     >
-      <g stroke="currentColor" opacity="0.11">
-        <path d="M0 120H960M0 240H960M0 360H960M0 480H960M0 600H960" />
-        <path d="M120 0V720M240 0V720M360 0V720M480 0V720M600 0V720M720 0V720M840 0V720" />
-      </g>
-
       <text
         x="72"
         y="94"
@@ -148,9 +126,6 @@ function PrimeCityArtwork() {
       >
         PRIME / CITY
       </text>
-      <path d="M72 126H360" stroke="currentColor" strokeWidth="3" opacity="0.55" />
-      <path d="M72 150H254" stroke="currentColor" strokeWidth="3" opacity="0.28" />
-
       <path
         d="M72 572H239V430H392V238H566V350H756V572H887"
         stroke="currentColor"
@@ -179,13 +154,6 @@ function PrimeCityArtwork() {
       <rect x="72" y="212" width="122" height="122" stroke="currentColor" strokeWidth="5" />
       <path d="M102 273H164M133 242V304" stroke="currentColor" strokeWidth="8" />
 
-      <path d="M72 648H888" stroke="currentColor" strokeWidth="2" opacity="0.34" />
-      <path d="M72 632V664M888 632V664" stroke="currentColor" strokeWidth="2" />
-      <g fill="currentColor">
-        <circle cx="475" cy="648" r="6" opacity="0.4" />
-        <circle cx="497" cy="648" r="6" opacity="0.68" />
-        <circle cx="519" cy="648" r="6" />
-      </g>
     </svg>
   );
 }

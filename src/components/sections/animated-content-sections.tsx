@@ -29,7 +29,7 @@ export function AnimatedContentSections({
         reveals.forEach((element) => {
           gsap.from(element, {
             clearProps: "opacity,transform",
-            duration: 0.64,
+            duration: 0.56,
             ease: "power3.out",
             opacity: 0,
             scrollTrigger: {
@@ -37,7 +37,7 @@ export function AnimatedContentSections({
               start: "top 88%",
               once: true,
             },
-            y: 22,
+            y: 16,
           });
         });
       });

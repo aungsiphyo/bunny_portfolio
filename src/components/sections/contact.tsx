@@ -7,57 +7,47 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="scroll-mt-20 border-t border-border bg-background py-14 text-foreground sm:py-20 lg:py-24"
+      className="scroll-mt-20 bg-background pb-8 text-foreground sm:pb-10"
       aria-labelledby="contact-title"
     >
       <Container>
-        <header data-section-reveal>
-          <p className="font-mono text-xs font-semibold tracking-[0.1em] text-muted-foreground uppercase">
-            Get in touch
-          </p>
-          <h2
-            id="contact-title"
-            className="mt-3 max-w-[14ch] text-[clamp(2rem,5vw,3.5rem)] leading-[0.92] font-semibold tracking-[-0.04em] text-balance"
-          >
-            Start a conversation.
-          </h2>
-        </header>
+        <div className="rounded-[1.75rem] bg-surface px-6 py-12 sm:px-10 sm:py-16 lg:px-14 lg:py-20">
+          <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
+            <header className="lg:col-span-8" data-section-reveal>
+              <p className="text-sm font-semibold text-muted-foreground">Get in touch</p>
+              <h2
+                id="contact-title"
+                className="mt-3 max-w-[12ch] text-heading font-semibold text-balance"
+              >
+                Have something in mind? Let&apos;s build it.
+              </h2>
+              <a
+                className="mt-7 inline-flex max-w-full items-center gap-3 text-[clamp(1.1rem,2.5vw,1.65rem)] font-semibold underline decoration-foreground/30 underline-offset-8 transition-colors hover:text-primary motion-reduce:transition-none"
+                href={`mailto:${siteConfig.email}`}
+              >
+                <Mail className="size-5 shrink-0" aria-hidden="true" />
+                <span className="break-all">{siteConfig.email}</span>
+              </a>
+            </header>
 
-        <div className="mt-10 grid gap-12 sm:mt-14 lg:mt-16 lg:grid-cols-12 lg:items-end">
-          <div className="lg:col-span-8" data-section-reveal>
-            <p className="max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-              For freelance work, engineering opportunities, or collaboration,
-              email me directly.
-            </p>
-            <a
-              className="group mt-8 inline-flex max-w-full items-center gap-3 border-b-2 border-decorative-rose pb-2 text-[clamp(1.25rem,3vw,2.25rem)] leading-tight font-semibold tracking-[-0.045em] transition-colors hover:border-primary hover:text-primary motion-reduce:transition-none"
-              href={`mailto:${siteConfig.email}`}
-            >
-              <Mail className="size-[0.8em] shrink-0" aria-hidden="true" />
-              <span className="break-all">{siteConfig.email}</span>
-            </a>
-          </div>
-
-          <div className="lg:col-span-3 lg:col-start-10" data-section-reveal>
-            <p className="font-mono text-xs font-semibold tracking-[0.1em] text-muted-foreground uppercase">
-              Elsewhere
-            </p>
-            <ul className="mt-5 grid border-t border-border">
-              {siteConfig.socialLinks.map((link) => (
-                <li className="border-b border-border" key={link.href}>
-                  <a
-                    className="flex min-h-14 items-center justify-between gap-4 py-3 font-semibold transition-colors hover:text-primary motion-reduce:transition-none"
-                    href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span>{link.label}</span>
-                    <ArrowUpRight className="size-5" aria-hidden="true" />
-                    <span className="sr-only"> (opens in a new tab)</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <nav className="lg:col-span-3 lg:col-start-10" aria-label="Social links" data-section-reveal>
+              <ul className="grid border-t border-foreground/20">
+                {siteConfig.socialLinks.map((link) => (
+                  <li className="border-b border-foreground/20" key={link.href}>
+                    <a
+                      className="flex min-h-14 items-center justify-between gap-4 py-3 font-semibold transition-colors hover:text-primary motion-reduce:transition-none"
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span>{link.label}</span>
+                      <ArrowUpRight className="size-5" aria-hidden="true" />
+                      <span className="sr-only"> (opens in a new tab)</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
         </div>
       </Container>
