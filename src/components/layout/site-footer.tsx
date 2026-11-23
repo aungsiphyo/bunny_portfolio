@@ -15,9 +15,9 @@ export function SiteFooter() {
             <a
               className="inline-flex min-h-11 items-center text-3xl font-semibold tracking-[-0.06em] transition-colors hover:text-hero-accent motion-reduce:transition-none"
               href="#main-content"
-              aria-label="Bunny — back to top"
+              aria-label="Ko Si — back to top"
             >
-              bunny.
+              kosi.
             </a>
           </div>
 
@@ -63,7 +63,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-10 flex flex-col gap-3 border-t border-background/20 pt-6 font-mono text-xs tracking-[0.06em] text-background/65 sm:flex-row sm:items-center sm:justify-between">
-          <p>© Bunny (Ko Si). All rights reserved.</p>
+          <p>© Aung Si Phyo (Ko Si). All rights reserved.</p>
           <p>Software Engineer · Cloud &amp; DevOps Enthusiast</p>
         </div>
       </Container>

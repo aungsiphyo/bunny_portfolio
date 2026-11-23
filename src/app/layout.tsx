@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Bunny — Software Engineer",
-    template: "%s | Bunny",
+    default: "Ko Si — Software Engineer",
+    template: "%s | Ko Si",
   },
   description:
-    "Portfolio of Bunny (Ko Si), Software Engineer and Cloud & DevOps Enthusiast.",
+    "Portfolio of Aung Si Phyo (Ko Si), Software Engineer and Cloud & DevOps Enthusiast.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

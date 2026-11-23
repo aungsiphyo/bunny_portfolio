@@ -8,7 +8,7 @@ export const profileContent = {
   positioning: siteConfig.positioning,
   currentStatus: freelanceExperience.role,
   introduction: [
-    "Hey, I'm Bunny (Ko Si), a freelance software engineer working across the full lifecycle of a product — from responsive interfaces and backend integrations to deployment.",
+    "Hey, I'm Aung Si Phyo, also known as Ko Si — a freelance software engineer working across the full lifecycle of a product, from responsive interfaces and backend integrations to deployment.",
     "I enjoy creating thoughtful user experiences and managing the cloud infrastructure that keeps applications running.",
   ],
   freelanceAreas: [
@@ -18,8 +18,8 @@ export const profileContent = {
   ],
   media: {
     kind: "image",
-    src: "/images/bunny-portrait.png",
-    alt: "Portrait of Bunny (Ko Si)",
+    src: "/images/aung-si-phyo-portrait.png",
+    alt: "Portrait of Aung Si Phyo (Ko Si)",
     width: 1254,
     height: 1254,
   },

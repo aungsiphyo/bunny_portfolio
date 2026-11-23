@@ -1,4 +1,5 @@
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 import { ProfileMedia } from "@/components/profile/profile-media";
 import { AnimatedHero } from "@/components/sections/animated-hero";
@@ -29,8 +30,13 @@ export function Hero() {
         </div>
 
         <div className="hero-identity relative isolate min-h-0" data-hero-composition>
-          <div
-            className="absolute left-1/2 top-1/2 z-0 h-[70%] w-[62%] -translate-x-1/2 -translate-y-1/2 rounded-[45%_55%_48%_52%] bg-highlight sm:w-[46%] lg:h-[76%] lg:w-[34%]"
+          <Image
+            className="hero-portrait-blob absolute z-0"
+            src="/images/hero-portrait-blob.svg"
+            alt=""
+            width={620}
+            height={720}
+            sizes="(min-width: 1024px) 38vw, (min-width: 640px) 58vw, 88vw"
             data-hero-shape
             aria-hidden="true"
           />

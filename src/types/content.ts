@@ -111,6 +111,8 @@ export type ProjectCover =
       alt: string;
       width: number;
       height: number;
+      fit?: "natural" | "contain";
+      background?: ProjectVisualIdentity;
     }>;
 
 export type ProjectScreenshot = Readonly<{
@@ -119,6 +121,24 @@ export type ProjectScreenshot = Readonly<{
   caption: string;
   width: number;
   height: number;
+}>;
+
+export type ProjectVideo = Readonly<{
+  src: `/${string}`;
+  poster: `/${string}`;
+  title: string;
+  width: number;
+  height: number;
+  duration: string;
+}>;
+
+export type UniYatwonMedia = Readonly<{
+  logo: ProjectScreenshot;
+  poster: ProjectScreenshot;
+  brandMotion: ProjectVideo;
+  applicationScreens: NonEmptyReadonlyArray<ProjectScreenshot>;
+  walkthrough: ProjectVideo;
+  showcasePhotos: NonEmptyReadonlyArray<ProjectScreenshot>;
 }>;
 
 export type CaseStudyProject = Readonly<{
@@ -141,6 +161,12 @@ export type CaseStudyProject = Readonly<{
   screenshots?: NonEmptyReadonlyArray<ProjectScreenshot>;
   statusNote?: string;
 }>;
+
+export type UniYatwonProject = CaseStudyProject &
+  Readonly<{
+    slug: "uni-yatwon";
+    media: UniYatwonMedia;
+  }>;
 
 export type CompactProject = Readonly<{
   slug: string;

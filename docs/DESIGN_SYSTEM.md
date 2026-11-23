@@ -1,10 +1,10 @@
-# Bunny Portfolio — Design System
+# Ko Si Portfolio — Design System
 
 ## Design principles
 
 - **Editorial hierarchy:** use scale, rhythm, and whitespace before decoration.
 - **Experimental with restraint:** asymmetry and expressive typography should support the story, not obscure navigation or content.
-- **Project-aware:** portfolio chrome uses Bunny's core palette; individual projects retain their own visual identities.
+- **Project-aware:** portfolio chrome uses Ko Si's core palette; individual projects retain their own visual identities.
 - **Accessible by construction:** color contrast, visible focus, semantic structure, and motion preferences are foundation requirements.
 
 ## Color palette
@@ -73,4 +73,4 @@ Use sentence case for headings. Keep long-form copy near `65ch`; display text ma
 - Use `next/image` with accurate dimensions and responsive `sizes` once assets arrive.
 - Preserve each image's natural aspect ratio unless an explicitly art-directed crop is approved.
 - Provide concise, contextual alt text. Use `alt=""` only when an image is genuinely decorative and adjacent text conveys all of its meaning.
-- The homepage portrait cutout lives at `public/images/bunny-portrait.png` and is referenced from `src/content/profile.ts`. Its current source dimensions are `1254 × 1254`; future replacements should be transparent PNG or WebP assets at approximately `1600 × 2000` or larger, with the full upper body retained and comfortable space around the hair and shoulders.
+- The homepage portrait cutout lives at `public/images/aung-si-phyo-portrait.png` and is referenced from `src/content/profile.ts`. Its current source dimensions are `1254 × 1254`; future replacements should be transparent PNG or WebP assets at approximately `1600 × 2000` or larger, with the full upper body retained and comfortable space around the hair and shoulders.

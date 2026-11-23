@@ -10,9 +10,9 @@ export function ProjectHeader() {
         <Link
           className="inline-flex min-h-11 items-center text-xl font-bold tracking-[-0.055em]"
           href="/"
-          aria-label="Bunny — home"
+          aria-label="Ko Si — home"
         >
-          bunny.
+          kosi.
         </Link>
 
         <nav aria-label="Project navigation">

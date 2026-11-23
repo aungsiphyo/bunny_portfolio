@@ -8,12 +8,12 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
-## Bunny Portfolio engineering conventions
+## Ko Si Portfolio engineering conventions
 
 - Treat `src/app` as the routing layer. Keep reusable UI in `src/components`.
 - Favor Server Components. Add `"use client"` only for browser APIs, stateful interaction, or animation, and keep that boundary as small as possible.
 - Store site-wide facts in `src/data`, project narratives in `src/content/projects`, and shared content contracts in `src/types`. Do not duplicate content inside components.
-- Do not infer or invent achievements, metrics, dates, URLs, screenshots, or technical claims. Leave unknown fields absent until Bunny verifies them.
+- Do not infer or invent achievements, metrics, dates, URLs, screenshots, or technical claims. Leave unknown fields absent until Ko Si verifies them.
 - Consume semantic design tokens rather than raw palette values. Project identity colors may be scoped to that project, and real screenshots must never be recolored.
 - Build mobile-first with semantic landmarks, logical heading order, visible keyboard focus, descriptive accessible names, and comfortable touch targets.
 - Every motion feature must have a meaningful static state and respect `prefers-reduced-motion`. Keep future GSAP code isolated in small Client Components.

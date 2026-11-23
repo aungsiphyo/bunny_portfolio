@@ -4,13 +4,13 @@ import type {
 } from "@/types/content";
 
 export const siteConfig = {
-  name: "Bunny",
-  alternateName: "Ko Si",
+  name: "Ko Si",
+  alternateName: "Aung Si Phyo",
   positioning: "Software Engineer | Cloud & DevOps Enthusiast",
   email: "aungsiphyoit@gmail.com",
   hero: {
-    introduction: "Hello, I'm Bunny (Ko Si)",
-    name: "Bunny.",
+    introduction: "Hello, I'm Aung Si Phyo",
+    name: "Ko Si.",
     role: ["Software", "Engineer."],
     positioning: "Software Engineer | Cloud & DevOps Enthusiast",
     supportingText:

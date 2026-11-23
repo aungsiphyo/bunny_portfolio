@@ -179,6 +179,14 @@ a {
   width: min(82vw, 25rem);
 }
 
+.hero-portrait-blob {
+  left: 50%;
+  top: 50%;
+  width: min(88vw, 27rem);
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
 @media (min-width: 640px) {
   .hero-identity {
     min-height: 35rem;
@@ -197,6 +205,11 @@ a {
     bottom: 11rem !important;
     height: 65%;
     width: min(54vw, 30rem);
+  }
+
+  .hero-portrait-blob {
+    top: 49%;
+    width: min(58vw, 34rem);
   }
 }
 
@@ -222,6 +235,11 @@ a {
     bottom: 0 !important;
     height: 104%;
     width: min(38vw, 35rem);
+  }
+
+  .hero-portrait-blob {
+    top: 51%;
+    width: min(38vw, 37rem);
   }
 }
 

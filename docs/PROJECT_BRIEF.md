@@ -1,10 +1,10 @@
-# Bunny Portfolio — Project Brief
+# Ko Si Portfolio — Project Brief
 
 ## Purpose
 
-Bunny Portfolio is the professional portfolio of Bunny (Ko Si), positioned as a **Software Engineer | Cloud & DevOps Enthusiast**. The experience should feel editorial, experimental, and premium without sacrificing clarity, performance, or accessibility.
+Ko Si Portfolio is the professional portfolio of Aung Si Phyo (Ko Si), positioned as a **Software Engineer | Cloud & DevOps Enthusiast**. The experience should feel editorial, experimental, and premium without sacrificing clarity, performance, or accessibility.
 
-The site should help a visitor quickly understand Bunny's focus, review selected work in appropriate depth, learn about experience and skills, and make contact.
+The site should help a visitor quickly understand Ko Si's focus, review selected work in appropriate depth, learn about experience and skills, and make contact.
 
 ## Audience
 
@@ -85,4 +85,4 @@ src/
 
 The portfolio includes the full homepage, portrait, and two detailed case-study
 routes. Authentic project screenshots, education details, and a resume remain
-absent until Bunny provides and verifies those assets and facts.
+absent until Ko Si provides and verifies those assets and facts.

@@ -17,7 +17,7 @@ export function About() {
               id="about-title"
               className="mt-3 max-w-[10ch] text-heading font-semibold text-balance"
             >
-              A little about Bunny.
+              A little about Ko Si.
             </h2>
           </header>
 

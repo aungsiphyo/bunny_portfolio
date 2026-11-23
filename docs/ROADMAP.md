@@ -1,4 +1,4 @@
-# Bunny Portfolio — Roadmap
+# Ko Si Portfolio — Roadmap
 
 ## Phase 1 — Foundation
 
@@ -60,6 +60,8 @@ Exit criteria: motion improves hierarchy without delaying access to content or w
 - [x] Responsive QA at 375px, 395px, 768px, 1024px, and 1440px
 - [x] Accessibility review with keyboard spot checks and reduced-motion implementation review
 - [x] Refine temporary Uni Yatwon and Prime City cover artwork
+- [x] Replace the Uni Yatwon placeholder with authentic project media and a structured case study.
+- [ ] Confirm publication consent for identifiable people and account/profile data in supplied Uni Yatwon media before deployment.
 - [ ] Cross-browser QA outside the in-app Chromium browser
 - [ ] OS-level reduced-motion emulation outside the in-app browser
 - Performance, metadata, social image, sitemap, and robots review
@@ -73,20 +75,17 @@ Exit criteria: motion improves hierarchy without delaying access to content or w
 - [x] Prioritize contributions before feature inventories in detailed case studies.
 - [x] Keep scroll-reveal motion visible during rapid scrolling by animating only a short transform.
 - [x] Add a typed, conditional screenshot gallery that renders only when authentic assets exist.
-- [ ] Add a compact Education entry after Bunny verifies the institution, degree or major, and attendance or graduation dates.
+- [ ] Add a compact Education entry after Ko Si verifies the institution, degree or major, and attendance or graduation dates.
 - [ ] Add a Download Resume link after an approved PDF is supplied and checked.
 - [ ] Verify the specific technical challenges and technology rationale for each case study before publishing an engineering-decisions section.
 - [ ] Verify whether the public names “Hcitepyoe Matesway” and “Lanpya” need any alternate spelling or supporting product descriptions.
 
-### Project screenshot asset requirements
+### Remaining project screenshot asset requirements
 
-The gallery contract is ready in `src/types/content.ts`, but no gallery is
-rendered until each image has verified alt text, caption, and natural pixel
-dimensions. Supply original, unfiltered images at these paths (or approve an
-equivalent WebP naming scheme):
+Uni Yatwon media is now mapped from the supplied originals with verified pixel
+dimensions. Prime City still needs original, unfiltered screenshots with
+verified alt text, captions, and natural pixel dimensions:
 
-- `public/images/projects/uni-yatwon/01.png`
-- `public/images/projects/uni-yatwon/02.png`
 - `public/images/projects/prime-city/01.png`
 - `public/images/projects/prime-city/02.png`
 
@@ -97,7 +96,7 @@ Deployment, domain configuration, analytics, and pushing changes require separat
 
 ## Content still required
 
-- Original screenshots for each featured project
+- Original screenshots for Prime City
 - Any additional approved case-study narrative
 - Any approved demo URLs or additional project links
 - Final approval of the draft About copy

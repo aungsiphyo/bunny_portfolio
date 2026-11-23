@@ -21,6 +21,38 @@ export function ProjectCover({
   const frameClassName = `relative isolate overflow-hidden ${formatClassNames[format]}`;
 
   if (cover.kind === "image") {
+    if (cover.fit === "contain") {
+      const containedFrameClassName =
+        format === "card"
+          ? "aspect-square sm:aspect-[5/4]"
+          : formatClassNames[format];
+
+      return (
+        <div
+          className={`relative isolate overflow-hidden ${containedFrameClassName} ${
+            cover.background === "yellow"
+              ? "project-cover--uni-yatwon"
+              : "bg-surface"
+          } p-3 sm:p-5`}
+        >
+          <div className="relative h-full w-full">
+            <Image
+              className="object-contain transition-transform duration-700 ease-out motion-reduce:transform-none motion-reduce:transition-none group-hover:scale-[1.01]"
+              src={cover.src}
+              alt={cover.alt}
+              fill
+              sizes={
+                format === "case-study"
+                  ? "(min-width: 1440px) 1344px, (min-width: 768px) calc(100vw - 64px), calc(100vw - 40px)"
+                  : "(min-width: 1024px) 55vw, (min-width: 640px) calc(100vw - 64px), calc(100vw - 40px)"
+              }
+              preload={preload}
+            />
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="relative isolate overflow-hidden">
         <Image

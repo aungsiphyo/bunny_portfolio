@@ -48,10 +48,10 @@ export function AnimatedWordmark() {
     <Link
       className="relative z-10 inline-flex min-h-11 items-center text-xl font-semibold tracking-[-0.06em] text-foreground transition-colors hover:text-primary"
       href="/"
-      aria-label="Bunny, home"
+      aria-label="Ko Si, home"
     >
       <span ref={wordmarkRef} aria-hidden="true">
-        bunny.
+        kosi.
       </span>
     </Link>
   );
