@@ -209,9 +209,12 @@ export function UniYatwonCaseStudy({ project }: UniYatwonCaseStudyProps) {
                 description="The project was demonstrated as a working web and mobile experience during the university project showcase."
               />
               <div className="mt-10 sm:mt-12">
-                {media.showcasePhotos.map((photo) => (
-                  <MediaFigure image={photo} key={photo.src} />
-                ))}
+                <MediaFigure image={media.showcasePhotos[0]} />
+                <div className="mt-8 grid gap-8 sm:grid-cols-2 sm:gap-6 lg:mt-10 lg:gap-10">
+                  {media.showcasePhotos.slice(1).map((photo) => (
+                    <MediaFigure image={photo} key={photo.src} />
+                  ))}
+                </div>
               </div>
             </Container>
           </section>

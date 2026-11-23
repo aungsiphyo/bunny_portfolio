@@ -124,6 +124,20 @@ export const uniYatwonProject = {
         width: 1280,
         height: 960,
       },
+      {
+        src: "/projects/uni-yatwon/images/showcase-team-at-booth.jpg",
+        alt: "Uni Yatwon team members presenting the project at the university showcase booth",
+        caption: "The team presenting Uni Yatwon at the university project showcase.",
+        width: 1280,
+        height: 960,
+      },
+      {
+        src: "/projects/uni-yatwon/images/uni-yatwon-team.jpg",
+        alt: "Four Uni Yatwon team members sitting together on the university steps",
+        caption: "The Uni Yatwon project team.",
+        width: 1280,
+        height: 960,
+      },
     ],
   },
 } as const satisfies UniYatwonProject;

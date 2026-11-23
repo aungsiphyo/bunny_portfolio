@@ -61,7 +61,8 @@ Exit criteria: motion improves hierarchy without delaying access to content or w
 - [x] Accessibility review with keyboard spot checks and reduced-motion implementation review
 - [x] Refine temporary Uni Yatwon and Prime City cover artwork
 - [x] Replace the Uni Yatwon placeholder with authentic project media and a structured case study.
-- [ ] Confirm publication consent for identifiable people and account/profile data in supplied Uni Yatwon media before deployment.
+- [x] Confirm publication consent for the supplied Uni Yatwon team photographs.
+- [ ] Confirm that identifiable account/profile data in supplied Uni Yatwon product media is approved before deployment.
 - [ ] Cross-browser QA outside the in-app Chromium browser
 - [ ] OS-level reduced-motion emulation outside the in-app browser
 - Performance, metadata, social image, sitemap, and robots review
