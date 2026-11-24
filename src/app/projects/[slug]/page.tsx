@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { CaseStudy } from "@/components/project/case-study";
+import { AnimatedProjectPage } from "@/components/project/animated-project-page";
+import { HcitepyoeCaseStudy } from "@/components/project/hcitepyoe-case-study";
+import { LanpyaCaseStudy } from "@/components/project/lanpya-case-study";
 import { PrimeCityCaseStudy } from "@/components/project/prime-city-case-study";
 import { UniYatwonCaseStudy } from "@/components/project/uni-yatwon-case-study";
 import {
-  caseStudyProjects,
-  getCaseStudyProject,
+  detailedProjects,
+  getDetailedProject,
 } from "@/content/projects";
 
 type ProjectPageProps = Readonly<{
@@ -19,14 +22,14 @@ type ProjectPageProps = Readonly<{
 export const instant = false;
 
 export function generateStaticParams() {
-  return caseStudyProjects.map((project) => ({ slug: project.slug }));
+  return detailedProjects.map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata({
   params,
 }: ProjectPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const project = getCaseStudyProject(slug);
+  const project = getDetailedProject(slug);
 
   if (!project) {
     return {
@@ -36,25 +39,53 @@ export async function generateMetadata({
 
   return {
     title: project.title,
-    description: project.overview,
+    description: "overview" in project ? project.overview : project.context,
   };
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params;
-  const project = getCaseStudyProject(slug);
+  const project = getDetailedProject(slug);
 
   if (!project) {
     notFound();
   }
 
   if (project.slug === "uni-yatwon") {
-    return <UniYatwonCaseStudy project={project} />;
+    return (
+      <AnimatedProjectPage>
+        <UniYatwonCaseStudy project={project} />
+      </AnimatedProjectPage>
+    );
   }
 
   if (project.slug === "prime-city") {
-    return <PrimeCityCaseStudy project={project} />;
+    return (
+      <AnimatedProjectPage>
+        <PrimeCityCaseStudy project={project} />
+      </AnimatedProjectPage>
+    );
   }
 
-  return <CaseStudy project={project} />;
+  if (project.slug === "lets-tech-hackathon") {
+    return (
+      <AnimatedProjectPage>
+        <LanpyaCaseStudy project={project} />
+      </AnimatedProjectPage>
+    );
+  }
+
+  if (project.slug === "saik-pyo-mate-swe") {
+    return (
+      <AnimatedProjectPage>
+        <HcitepyoeCaseStudy project={project} />
+      </AnimatedProjectPage>
+    );
+  }
+
+  return (
+    <AnimatedProjectPage>
+      <CaseStudy project={project} />
+    </AnimatedProjectPage>
+  );
 }

@@ -1,8 +1,8 @@
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 
 import { ProfileMedia } from "@/components/profile/profile-media";
 import { AnimatedHero } from "@/components/sections/animated-hero";
+import { TypewriterName } from "@/components/sections/typewriter-name";
 import { Container } from "@/components/ui/container";
 import { profileContent } from "@/content/profile";
 import { siteConfig } from "@/data/site";
@@ -18,7 +18,7 @@ export function Hero() {
 
   return (
     <AnimatedHero>
-      <Container className="relative z-10 grid min-h-[48rem] grid-rows-[auto_minmax(0,1fr)_auto] pt-28 pb-7 sm:min-h-[52rem] sm:pt-32 sm:pb-9 lg:min-h-[min(56rem,100svh)] lg:pt-32 lg:pb-10">
+      <Container className="relative z-10 grid min-h-[48rem] grid-rows-[auto_minmax(0,1fr)_auto] pt-28 pb-7 sm:min-h-[52rem] sm:pt-32 sm:pb-9 lg:min-h-[min(52rem,calc(100svh-4.5rem))] lg:pt-24 lg:pb-6">
         <div
           className="flex items-center justify-between gap-6 text-xs font-semibold tracking-[0.12em] uppercase"
           data-hero-intro
@@ -30,24 +30,13 @@ export function Hero() {
         </div>
 
         <div className="hero-identity relative isolate min-h-0" data-hero-composition>
-          <Image
-            className="hero-portrait-blob absolute z-0"
-            src="/images/hero-portrait-blob.svg"
-            alt=""
-            width={620}
-            height={720}
-            sizes="(min-width: 1024px) 38vw, (min-width: 640px) 58vw, 88vw"
-            data-hero-shape
-            aria-hidden="true"
-          />
-
           <h1
             id="hero-title"
-            className="hero-identity-heading relative z-10 h-full font-semibold uppercase"
+            className="hero-identity-heading relative z-30 h-full font-semibold uppercase"
             aria-label={`${hero.name} ${hero.role.join(" ")}`}
           >
             <span className="hero-name block" aria-hidden="true" data-hero-name>
-              {hero.name}
+              <TypewriterName text={hero.name} />
             </span>
             <span className="hero-role block" aria-hidden="true">
               <span className="block" data-hero-role-line>{hero.role[0]}</span>
@@ -55,12 +44,15 @@ export function Hero() {
             </span>
           </h1>
 
-          <div className="hero-portrait absolute inset-x-0 bottom-0 z-20 mx-auto">
+          <div
+            className="hero-portrait absolute inset-x-0 z-20 mx-auto"
+            data-hero-shape
+          >
             <ProfileMedia media={profileContent.media} />
           </div>
         </div>
 
-        <div className="relative z-30 grid gap-5 border-t border-foreground/20 pt-5 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-10">
+        <div className="relative z-30 grid gap-5 pt-5 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end lg:gap-10 lg:pt-2">
           <div data-hero-support>
             <p className="font-semibold">{hero.positioning}</p>
             <p className="mt-1 max-w-[48ch] text-sm leading-relaxed text-muted-foreground sm:text-base">

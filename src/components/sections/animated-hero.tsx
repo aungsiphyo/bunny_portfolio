@@ -25,24 +25,29 @@ export function AnimatedHero({ children }: AnimatedHeroProps) {
       }
 
       const media = gsap.matchMedia();
+      const typewriter = hero.querySelector<HTMLElement>("[data-hero-typewriter]");
+      const typewriterCursor = hero.querySelector<HTMLElement>(
+        ".hero-typewriter-cursor",
+      );
+      const fullName = typewriter?.textContent ?? "";
 
       media.add("(prefers-reduced-motion: no-preference)", () => {
         const portrait = hero.querySelector<HTMLElement>("[data-hero-portrait]");
         const shape = hero.querySelector<HTMLElement>("[data-hero-shape]");
         const splitTargets = gsap.utils.toArray<HTMLElement>(
-          "[data-hero-name], [data-hero-role-line]",
+          "[data-hero-role-line]",
         );
 
         gsap
           .timeline({ defaults: { ease: "power3.out" } })
-          .from("[data-hero-intro]", { autoAlpha: 0, duration: 0.45, y: 12 })
-          .from(shape, { duration: 0.7, scale: 0.88 }, 0.1)
+          .from("[data-hero-intro]", { autoAlpha: 0, duration: 0.4, y: 10 })
+          .from(shape, { duration: 0.75, rotation: -3, scale: 0.9 }, 0.08)
           .from(
             portrait,
-            { autoAlpha: 0, clipPath: "inset(100% 0 0 0)", duration: 0.9, y: 24 },
-            0.28,
+            { autoAlpha: 0, duration: 0.75, scale: 0.92, y: 18 },
+            0.3,
           )
-          .from("[data-hero-support]", { autoAlpha: 0, duration: 0.45, y: 12 }, 0.85)
+          .from("[data-hero-support]", { autoAlpha: 0, duration: 0.45, y: 10 }, 0.82)
           .from(
             "[data-hero-cta]",
             { autoAlpha: 0, duration: 0.4, stagger: 0.07, y: 10 },
@@ -60,31 +65,70 @@ export function AnimatedHero({ children }: AnimatedHeroProps) {
             onSplit(split) {
               return gsap.from(split.lines, {
                 autoAlpha: 0,
-                delay: 0.12 + index * 0.1,
-                duration: 0.75,
-                ease: "power4.out",
-                stagger: 0.08,
-                yPercent: 110,
+                delay: 0.1 + index * 0.08,
+                duration: 0.65,
+                ease: "power3.out",
+                stagger: 0.06,
+                yPercent: 55,
               });
             },
           });
         });
 
-        if (portrait) {
-          gsap.to(portrait, {
-            ease: "none",
-            yPercent: 4,
-            scrollTrigger: {
-              trigger: hero,
-              start: "top top",
-              end: "bottom top",
-              scrub: 0.5,
-            },
-          });
+        media.add("(min-width: 640px)", () => {
+          if (portrait) {
+            gsap.to(portrait, {
+              ease: "none",
+              yPercent: 2,
+              scrollTrigger: {
+                trigger: hero,
+                start: "top top",
+                end: "bottom top",
+                scrub: 0.6,
+              },
+            });
+          }
+        });
+
+        if (typewriter) {
+          const typeState = { characters: 0 };
+          const updateTypewriter = () => {
+            typewriter.textContent = fullName.slice(
+              0,
+              Math.round(typeState.characters),
+            );
+          };
+
+          typewriter.textContent = "";
+
+          const typewriterTimeline = gsap.timeline({ repeat: -1 });
+          typewriterTimeline
+            .to(typeState, {
+              characters: fullName.length,
+              duration: fullName.length * 0.105,
+              ease: `steps(${fullName.length})`,
+              onUpdate: updateTypewriter,
+            })
+            .set(typewriterCursor, { autoAlpha: 0 })
+            .to({}, { duration: 5 })
+            .set(typewriterCursor, { autoAlpha: 1 })
+            .to(typeState, {
+              characters: 0,
+              duration: fullName.length * 0.065,
+              ease: `steps(${fullName.length})`,
+              onUpdate: updateTypewriter,
+            })
+            .to({}, { duration: 0.45 });
         }
       });
 
-      return () => media.revert();
+      return () => {
+        media.revert();
+
+        if (typewriter) {
+          typewriter.textContent = fullName;
+        }
+      };
     },
     { scope: heroRef },
   );

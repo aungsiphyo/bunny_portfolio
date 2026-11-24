@@ -25,9 +25,16 @@ export function Skills() {
                 key={category.id}
               >
                 <h3 className="font-semibold">{category.title}</h3>
-                <p className="mt-3 max-w-[30ch] leading-relaxed text-muted-foreground">
-                  {category.skills.join(" · ")}
-                </p>
+                <ul className="mt-4 flex flex-wrap gap-2" aria-label={`${category.title} technologies`}>
+                  {category.skills.map((skill) => (
+                    <li
+                      className="rounded-full border border-border px-3 py-1.5 text-sm font-medium text-muted-foreground"
+                      key={skill}
+                    >
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
               </article>
             ))}
           </div>

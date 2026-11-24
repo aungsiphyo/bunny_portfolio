@@ -112,7 +112,7 @@ export type ProjectCover =
       width: number;
       height: number;
       fit?: "natural" | "contain" | "cover";
-      background?: ProjectVisualIdentity;
+      background?: ProjectVisualIdentity | "dark" | "light";
     }>;
 
 export type ProjectScreenshot = Readonly<{
@@ -147,6 +147,17 @@ export type PrimeCityMedia = Readonly<{
   mobileScreens: NonEmptyReadonlyArray<ProjectScreenshot>;
   hardwarePhotos: NonEmptyReadonlyArray<ProjectScreenshot>;
   showcasePhotos: NonEmptyReadonlyArray<ProjectScreenshot>;
+}>;
+
+export type LanpyaMedia = Readonly<{
+  hero: ProjectScreenshot;
+  productScreens: NonEmptyReadonlyArray<ProjectScreenshot>;
+  teamPhotos: NonEmptyReadonlyArray<ProjectScreenshot>;
+}>;
+
+export type HcitepyoeMedia = Readonly<{
+  hero: ProjectScreenshot;
+  productScreens: NonEmptyReadonlyArray<ProjectScreenshot>;
 }>;
 
 export type CaseStudyProject = Readonly<{
@@ -188,6 +199,25 @@ export type CompactProject = Readonly<{
   context: string;
   presentation: "compact";
   contributions: NonEmptyReadonlyArray<string>;
+  repositories: NonEmptyReadonlyArray<ProjectRepository>;
+  cover?: ProjectCover;
+  detailHref?: `/projects/${string}`;
 }>;
+
+export type LanpyaProject = CompactProject &
+  Readonly<{
+    slug: "lets-tech-hackathon";
+    cover: ProjectCover;
+    detailHref: "/projects/lets-tech-hackathon";
+    media: LanpyaMedia;
+  }>;
+
+export type HcitepyoeProject = CompactProject &
+  Readonly<{
+    slug: "saik-pyo-mate-swe";
+    cover: ProjectCover;
+    detailHref: "/projects/saik-pyo-mate-swe";
+    media: HcitepyoeMedia;
+  }>;
 
 export type Project = CaseStudyProject | CompactProject;

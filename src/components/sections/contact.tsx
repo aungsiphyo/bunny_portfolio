@@ -11,10 +11,10 @@ export function Contact() {
       aria-labelledby="contact-title"
     >
       <Container>
-        <div className="rounded-[1.75rem] bg-surface px-6 py-12 sm:px-10 sm:py-16 lg:px-14 lg:py-20">
+        <div className="rounded-[1.75rem] bg-highlight px-6 py-12 sm:px-10 sm:py-16 lg:px-14 lg:py-20">
           <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
             <header className="lg:col-span-8" data-section-reveal>
-              <p className="text-sm font-semibold text-muted-foreground">Get in touch</p>
+              <p className="text-sm font-semibold text-foreground/75">Get in touch</p>
               <h2
                 id="contact-title"
                 className="mt-3 max-w-[12ch] text-heading font-semibold text-balance"

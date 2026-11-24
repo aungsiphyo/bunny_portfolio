@@ -34,7 +34,11 @@ export function ProjectCover({
               ? "project-cover--uni-yatwon"
               : cover.background === "black-and-yellow"
                 ? "project-cover--prime-city"
-              : "bg-surface"
+                : cover.background === "dark"
+                  ? "bg-[#080713]"
+                  : cover.background === "light"
+                    ? "bg-white"
+                    : "bg-surface"
           } p-3 sm:p-5`}
         >
           <div className="relative h-full w-full">

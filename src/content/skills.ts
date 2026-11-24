@@ -4,7 +4,7 @@ export const skillCategories = [
   {
     id: "frontend",
     title: "Frontend",
-    skills: ["React", "Next.js", "React Native"],
+    skills: ["React", "React Native"],
   },
   {
     id: "backend-databases",
@@ -12,11 +12,9 @@ export const skillCategories = [
     skills: [
       "Node.js",
       "Express",
-      "PHP",
       "PostgreSQL",
       "MySQL",
       "MongoDB",
-      "MongoDB Atlas",
     ],
   },
   {

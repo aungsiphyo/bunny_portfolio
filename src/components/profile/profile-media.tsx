@@ -14,7 +14,7 @@ export function ProfileMedia({ media }: ProfileMediaProps) {
         data-hero-portrait
       >
         <Image
-          className="object-contain object-bottom"
+          className="hero-portrait-image object-contain object-bottom"
           src={media.src}
           alt={media.alt}
           fill

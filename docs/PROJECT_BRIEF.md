@@ -29,8 +29,7 @@ style and context before the technical toolkit and contact prompt.
 
 Selected projects use two levels of presentation:
 
-- Detailed case studies: Uni Yatwon and Prime City
-- Compact project cards: Hcitepyoe Matesway (ASEAN Geo AI Fusion 2026) and Lanpya (Let's Tech Hackathon)
+- Detailed case studies: Uni Yatwon, Prime City, Hcitepyoe Matesway (ASEAN Geo AI Fusion 2026 Hackathon), and the media-led Lanpya hackathon project
 
 Case studies should eventually have dedicated routes under `/projects/[slug]`. The homepage should summarize and link to them rather than duplicate full case-study content.
 
@@ -83,6 +82,6 @@ src/
 
 ## Current content boundary
 
-The portfolio includes the full homepage, portrait, and two detailed case-study
-routes. Authentic project screenshots, education details, and a resume remain
-absent until Ko Si provides and verifies those assets and facts.
+The portfolio includes the full homepage, portrait, and four detailed project
+routes. Education details and a resume remain absent until Ko Si provides and
+verifies those assets and facts.

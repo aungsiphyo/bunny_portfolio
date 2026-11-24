@@ -81,15 +81,18 @@ Exit criteria: motion improves hierarchy without delaying access to content or w
 - [ ] Add a compact Education entry after Ko Si verifies the institution, degree or major, and attendance or graduation dates.
 - [ ] Add a Download Resume link after an approved PDF is supplied and checked.
 - [ ] Verify the specific technical challenges and technology rationale for each case study before publishing an engineering-decisions section.
-- [ ] Verify whether the public names “Hcitepyoe Matesway” and “Lanpya” need any alternate spelling or supporting product descriptions.
+- [ ] Verify whether the public name “Hcitepyoe Matesway” needs any alternate spelling or supporting product description.
+- [x] Add supplied Lanpya product and hackathon media with a dedicated project route.
+- [x] Add supplied Hcitepyoe Matesway product media with a dedicated project route.
 
 ### Project media status
 
-Uni Yatwon and Prime City media are mapped from the supplied originals with
-verified pixel dimensions, descriptive alternative text, and natural aspect
-ratios. Product screenshots are not cropped or recolored to force matching
-layouts. One supplied Prime City OTP screenshot remains intentionally excluded
-because it exposes an email address and a verification code.
+Uni Yatwon, Prime City, Lanpya, and Hcitepyoe Matesway media are mapped from the
+supplied originals with verified pixel dimensions, descriptive alternative
+text, and natural aspect ratios. Product screenshots are not cropped or
+recolored to force matching layouts. One supplied Prime City OTP screenshot
+remains intentionally excluded because it exposes an email address and a
+verification code.
 
 Deployment, domain configuration, analytics, and pushing changes require separate approval.
 

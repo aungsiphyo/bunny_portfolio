@@ -28,15 +28,16 @@ export function AnimatedContentSections({
 
         reveals.forEach((element) => {
           gsap.from(element, {
-            clearProps: "transform",
-            duration: 0.48,
+            autoAlpha: 0,
+            clearProps: "opacity,transform,visibility",
+            duration: 0.7,
             ease: "power3.out",
             scrollTrigger: {
               trigger: element,
-              start: "top 96%",
+              start: "top 94%",
               once: true,
             },
-            y: 10,
+            y: 16,
           });
         });
       });
