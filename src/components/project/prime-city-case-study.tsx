@@ -144,7 +144,7 @@ export function PrimeCityCaseStudy({ project }: PrimeCityCaseStudyProps) {
                 title="Physical system"
                 description="The physical model brought access, parking, lighting, displays, and connected-device communication into the same prototype."
               />
-              <div className="mt-10 grid gap-8 sm:grid-cols-2 sm:gap-6 lg:mx-auto lg:max-w-5xl lg:gap-10">
+              <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-4 sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 sm:pb-0 sm:gap-6 lg:mx-auto lg:max-w-5xl lg:gap-10">
                 {media.hardwarePhotos.map((photo) => (
                   <MediaFigure image={photo} key={photo.src} portrait />
                 ))}
