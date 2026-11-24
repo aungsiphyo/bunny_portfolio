@@ -21,17 +21,19 @@ export function ProjectCover({
   const frameClassName = `relative isolate overflow-hidden ${formatClassNames[format]}`;
 
   if (cover.kind === "image") {
-    if (cover.fit === "contain") {
-      const containedFrameClassName =
-        format === "card"
-          ? "aspect-square sm:aspect-[5/4]"
-          : formatClassNames[format];
+    const imageFrameClassName =
+      format === "card"
+        ? "aspect-square sm:aspect-[5/4]"
+        : formatClassNames[format];
 
+    if (cover.fit === "contain") {
       return (
         <div
-          className={`relative isolate overflow-hidden ${containedFrameClassName} ${
+          className={`relative isolate overflow-hidden ${imageFrameClassName} ${
             cover.background === "yellow"
               ? "project-cover--uni-yatwon"
+              : cover.background === "black-and-yellow"
+                ? "project-cover--prime-city"
               : "bg-surface"
           } p-3 sm:p-5`}
         >
@@ -49,6 +51,25 @@ export function ProjectCover({
               preload={preload}
             />
           </div>
+        </div>
+      );
+    }
+
+    if (cover.fit === "cover") {
+      return (
+        <div className={`relative isolate overflow-hidden ${imageFrameClassName}`}>
+          <Image
+            className="object-cover transition-transform duration-700 ease-out motion-reduce:transform-none motion-reduce:transition-none group-hover:scale-[1.015]"
+            src={cover.src}
+            alt={cover.alt}
+            fill
+            sizes={
+              format === "case-study"
+                ? "(min-width: 1440px) 1344px, (min-width: 768px) calc(100vw - 64px), calc(100vw - 40px)"
+                : "(min-width: 1024px) 55vw, (min-width: 640px) calc(100vw - 64px), calc(100vw - 40px)"
+            }
+            preload={preload}
+          />
         </div>
       );
     }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { CaseStudy } from "@/components/project/case-study";
+import { PrimeCityCaseStudy } from "@/components/project/prime-city-case-study";
 import { UniYatwonCaseStudy } from "@/components/project/uni-yatwon-case-study";
 import {
   caseStudyProjects,
@@ -49,6 +50,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   if (project.slug === "uni-yatwon") {
     return <UniYatwonCaseStudy project={project} />;
+  }
+
+  if (project.slug === "prime-city") {
+    return <PrimeCityCaseStudy project={project} />;
   }
 
   return <CaseStudy project={project} />;

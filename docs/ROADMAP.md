@@ -62,6 +62,8 @@ Exit criteria: motion improves hierarchy without delaying access to content or w
 - [x] Refine temporary Uni Yatwon and Prime City cover artwork
 - [x] Replace the Uni Yatwon placeholder with authentic project media and a structured case study.
 - [x] Confirm publication consent for the supplied Uni Yatwon team photographs.
+- [x] Replace the Prime City placeholder with authentic project media and a structured visual case study.
+- [x] Confirm publication consent for the supplied Prime City team photograph.
 - [ ] Confirm that identifiable account/profile data in supplied Uni Yatwon product media is approved before deployment.
 - [ ] Cross-browser QA outside the in-app Chromium browser
 - [ ] OS-level reduced-motion emulation outside the in-app browser
@@ -81,23 +83,18 @@ Exit criteria: motion improves hierarchy without delaying access to content or w
 - [ ] Verify the specific technical challenges and technology rationale for each case study before publishing an engineering-decisions section.
 - [ ] Verify whether the public names “Hcitepyoe Matesway” and “Lanpya” need any alternate spelling or supporting product descriptions.
 
-### Remaining project screenshot asset requirements
+### Project media status
 
-Uni Yatwon media is now mapped from the supplied originals with verified pixel
-dimensions. Prime City still needs original, unfiltered screenshots with
-verified alt text, captions, and natural pixel dimensions:
-
-- `public/images/projects/prime-city/01.png`
-- `public/images/projects/prime-city/02.png`
-
-After assets arrive, add their metadata to the appropriate typed project module.
-Do not crop or recolor product screenshots merely to make aspect ratios match.
+Uni Yatwon and Prime City media are mapped from the supplied originals with
+verified pixel dimensions, descriptive alternative text, and natural aspect
+ratios. Product screenshots are not cropped or recolored to force matching
+layouts. One supplied Prime City OTP screenshot remains intentionally excluded
+because it exposes an email address and a verification code.
 
 Deployment, domain configuration, analytics, and pushing changes require separate approval.
 
 ## Content still required
 
-- Original screenshots for Prime City
 - Any additional approved case-study narrative
 - Any approved demo URLs or additional project links
 - Final approval of the draft About copy

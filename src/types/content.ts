@@ -111,7 +111,7 @@ export type ProjectCover =
       alt: string;
       width: number;
       height: number;
-      fit?: "natural" | "contain";
+      fit?: "natural" | "contain" | "cover";
       background?: ProjectVisualIdentity;
     }>;
 
@@ -141,6 +141,14 @@ export type UniYatwonMedia = Readonly<{
   showcasePhotos: NonEmptyReadonlyArray<ProjectScreenshot>;
 }>;
 
+export type PrimeCityMedia = Readonly<{
+  logo: ProjectScreenshot;
+  brandGuide: ProjectScreenshot;
+  mobileScreens: NonEmptyReadonlyArray<ProjectScreenshot>;
+  hardwarePhotos: NonEmptyReadonlyArray<ProjectScreenshot>;
+  showcasePhotos: NonEmptyReadonlyArray<ProjectScreenshot>;
+}>;
+
 export type CaseStudyProject = Readonly<{
   slug: string;
   title: string;
@@ -166,6 +174,12 @@ export type UniYatwonProject = CaseStudyProject &
   Readonly<{
     slug: "uni-yatwon";
     media: UniYatwonMedia;
+  }>;
+
+export type PrimeCityProject = CaseStudyProject &
+  Readonly<{
+    slug: "prime-city";
+    media: PrimeCityMedia;
   }>;
 
 export type CompactProject = Readonly<{
