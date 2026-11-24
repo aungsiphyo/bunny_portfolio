@@ -4,6 +4,7 @@ import { SkipLink } from "@/components/layout/skip-link";
 import { About } from "@/components/sections/about";
 import { AnimatedContentSections } from "@/components/sections/animated-content-sections";
 import { Contact } from "@/components/sections/contact";
+import { Credentials } from "@/components/sections/credentials";
 import { Experience } from "@/components/sections/experience";
 import { Hero } from "@/components/sections/hero";
 import { SelectedWork } from "@/components/sections/selected-work";
@@ -21,6 +22,7 @@ export default function Home() {
           <Experience />
           <About />
           <Skills />
+          <Credentials />
           <Contact />
         </AnimatedContentSections>
       </main>

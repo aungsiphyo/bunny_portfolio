@@ -79,7 +79,9 @@ Exit criteria: motion improves hierarchy without delaying access to content or w
 - [x] Keep scroll-reveal motion visible during rapid scrolling by animating only a short transform.
 - [x] Add a typed, conditional screenshot gallery that renders only when authentic assets exist.
 - [ ] Add a compact Education entry after Ko Si verifies the institution, degree or major, and attendance or graduation dates.
-- [ ] Add a Download Resume link after an approved PDF is supplied and checked.
+- [x] Add approved resume access to the desktop navigation, mobile navigation, and hero.
+- [x] Add the approved Schedjuice recommendation letter to the internship entry.
+- [x] Add three supplied GeoAI credentials in a compact section near Skills.
 - [ ] Verify the specific technical challenges and technology rationale for each case study before publishing an engineering-decisions section.
 - [ ] Verify whether the public name “Hcitepyoe Matesway” needs any alternate spelling or supporting product description.
 - [x] Add supplied Lanpya product and hackathon media with a dedicated project route.
@@ -102,5 +104,4 @@ Deployment, domain configuration, analytics, and pushing changes require separat
 - Any approved demo URLs or additional project links
 - Final approval of the draft About copy
 - Verified university, degree or major, and education dates
-- Approved resume PDF
 - Verified case-study technical challenges and technology rationale

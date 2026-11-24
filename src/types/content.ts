@@ -10,6 +10,11 @@ export type NavigationItem = Readonly<{
   href: `#${SectionId}`;
 }>;
 
+export type PublicDocumentLink = Readonly<{
+  label: string;
+  href: `/documents/${string}.pdf`;
+}>;
+
 export type HeroContent = Readonly<{
   introduction: string;
   name: string;
@@ -30,6 +35,7 @@ export type SiteConfig = Readonly<{
   alternateName: string;
   positioning: string;
   email: `${string}@${string}`;
+  resume: PublicDocumentLink;
   hero: HeroContent;
   socialLinks: readonly SocialLink[];
 }>;
@@ -81,12 +87,22 @@ export type ExperienceEntry = Readonly<{
   period: DatedExperiencePeriod | CurrentExperiencePeriod;
   detailsLabel: "Responsibilities" | "Areas of work";
   details: NonEmptyReadonlyArray<string>;
+  supportingDocument?: PublicDocumentLink;
 }>;
 
 export type SkillCategory = Readonly<{
   id: string;
   title: string;
   skills: NonEmptyReadonlyArray<string>;
+}>;
+
+export type Certification = Readonly<{
+  id: string;
+  title: string;
+  issuer: string;
+  issuedAt: string;
+  credentialId: string;
+  documentUrl: `/documents/${string}.pdf`;
 }>;
 
 export type ProjectPresentation = "case-study" | "compact";

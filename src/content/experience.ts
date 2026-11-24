@@ -23,6 +23,10 @@ export const schedjuiceExperience = {
     "Worked on bug fixing, testing, and debugging.",
     "Implemented content management features using Payload CMS.",
   ],
+  supportingDocument: {
+    label: "View recommendation letter",
+    href: "/documents/Aung-Si-Phyo-Schedjuice-Recommendation-Letter.pdf",
+  },
 } as const satisfies ExperienceEntry;
 
 export const freelanceExperience = {

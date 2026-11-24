@@ -1,15 +1,16 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 
-import type { NavigationItem } from "@/types/content";
+import type { NavigationItem, PublicDocumentLink } from "@/types/content";
 
 type MobileNavigationProps = Readonly<{
   items: readonly NavigationItem[];
+  resume: PublicDocumentLink;
 }>;
 
-export function MobileNavigation({ items }: MobileNavigationProps) {
+export function MobileNavigation({ items, resume }: MobileNavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -75,6 +76,17 @@ export function MobileNavigation({ items }: MobileNavigationProps) {
                   </a>
                 </li>
               ))}
+              <li>
+                <a
+                  className="flex min-h-16 items-center justify-between gap-6 rounded-xl px-3 font-semibold tracking-[-0.03em] transition-colors hover:bg-surface/45 motion-reduce:transition-none"
+                  href={resume.href}
+                  download="Aung-Si-Phyo-Resume.pdf"
+                  onClick={closeMenu}
+                >
+                  <span>{resume.label}</span>
+                  <Download className="size-4 text-muted-foreground" aria-hidden="true" />
+                </a>
+              </li>
             </ul>
           </nav>
         </div>

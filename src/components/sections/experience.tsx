@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, FileCheck2 } from "lucide-react";
 
 import { Container } from "@/components/ui/container";
 import { experienceEntries } from "@/content/experience";
@@ -71,6 +71,24 @@ function ExperienceItem({ entry }: ExperienceItemProps) {
             </li>
           ))}
         </ul>
+        {entry.supportingDocument ? (
+          <div className="mt-6 border-t border-border pt-4">
+            <p className="text-sm font-medium text-muted-foreground">
+              Recommendation letter
+            </p>
+            <a
+              className="mt-2 inline-flex min-h-11 items-center gap-2 font-semibold underline decoration-border underline-offset-4 transition-colors hover:text-primary motion-reduce:transition-none"
+              href={entry.supportingDocument.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FileCheck2 className="size-4" aria-hidden="true" />
+              {entry.supportingDocument.label}
+              <ArrowUpRight className="size-4" aria-hidden="true" />
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          </div>
+        ) : null}
       </div>
     </article>
   );

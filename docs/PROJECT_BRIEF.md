@@ -21,7 +21,8 @@ The home page will be organized in this order:
 3. Experience
 4. About
 5. Skills
-6. Contact
+6. Selected Credentials
+7. Contact
 
 This order prioritizes the evidence recruiters typically scan first: role,
 projects, and professional experience. The About section then adds working
@@ -82,6 +83,7 @@ src/
 
 ## Current content boundary
 
-The portfolio includes the full homepage, portrait, and four detailed project
-routes. Education details and a resume remain absent until Ko Si provides and
-verifies those assets and facts.
+The portfolio includes the full homepage, portrait, four detailed project
+routes, approved resume access, the Schedjuice recommendation letter, and
+three selected credentials. Education details remain absent until Ko Si
+provides and verifies the institution, program, and dates.

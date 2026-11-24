@@ -8,6 +8,10 @@ export const siteConfig = {
   alternateName: "Aung Si Phyo",
   positioning: "Software Engineer | Cloud & DevOps Enthusiast",
   email: "aungsiphyoit@gmail.com",
+  resume: {
+    label: "Download CV",
+    href: "/documents/Aung-Si-Phyo-Resume.pdf",
+  },
   hero: {
     introduction: "Hello, I'm Aung Si Phyo",
     name: "Ko Si.",

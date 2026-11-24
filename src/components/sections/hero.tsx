@@ -1,4 +1,4 @@
-import { ArrowDownRight, ArrowUpRight } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Download } from "lucide-react";
 
 import { ProfileMedia } from "@/components/profile/profile-media";
 import { AnimatedHero } from "@/components/sections/animated-hero";
@@ -12,6 +12,9 @@ const primaryCtaClassName =
 
 const secondaryCtaClassName =
   "inline-flex min-h-12 items-center gap-3 rounded-full border border-foreground/35 px-5 font-semibold text-foreground transition-[background-color,border-color,transform] hover:-translate-y-0.5 hover:border-foreground hover:bg-foreground/[0.06] motion-reduce:transform-none motion-reduce:transition-none";
+
+const tertiaryCtaClassName =
+  "inline-flex min-h-12 items-center gap-2 px-2 font-semibold text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:text-primary motion-reduce:transition-none";
 
 export function Hero() {
   const { hero } = siteConfig;
@@ -71,6 +74,17 @@ export function Hero() {
             </a>
             <a
               className={secondaryCtaClassName}
+              href={siteConfig.resume.href}
+              target="_blank"
+              rel="noreferrer"
+              data-hero-cta
+            >
+              {siteConfig.resume.label}
+              <Download className="size-4" aria-hidden="true" />
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+            <a
+              className={tertiaryCtaClassName}
               href={hero.secondaryCta.href}
               data-hero-cta
             >
